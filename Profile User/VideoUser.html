@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .kotak {
+            position: absolute;
+            width: 256px;
+            height: 1000px;
+            left: 0px;
+            top: 90px;
+        }
+
+        p {
+            margin-top: 30px;
+            margin-left: 76px;
+            font-family: nunito;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(132, 123, 123, 1);
+        }
+
+        .atas {
+            position: absolute;
+            width: 1535px;
+            height: 90px;
+            left: 0px;
+            top: 0px;
+            background-color: rgba(221, 255, 223, 1);
+        }
+
+        h1 {
+            font-family: Nunito;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 150%;
+            margin-left: 355px;
+            margin-top: 60px;
+        }
+
+        .foto {
+            width: 300px;
+            height: 300px;
+            margin-left: 286px;
+            margin-top: 200px;
+            border-radius: 200px;
+        }
+
+        .logo {
+            margin-top: 19px;
+            margin-left: 70px;
+        }
+
+
+        li {
+            margin-top: 20px;
+            font-family: nunito;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(132, 123, 123, 1);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(132, 123, 123, 1);
+        }
+
+        .video {
+            margin-top: 50px;
+            margin-left: 355px;
+            font-family: nunito;
+        }
+
+        input[type=submit] {
+            width: 200px;
+            height: 49px;
+            background-color: rgba(7, 153, 17, 1);
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 450px;
+            margin-top: 70px;
+            font-family: nunito;
+            font-weight: bold;
+        }
+
+        input[type=submit]:hover {
+            background-color: #006103;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="atas">
+        <a href="#"><img class="logo" src="Mindy.png" height="41" width="86"></a>
+    </div>
+
+    <div class="judul" style="display: flex; margin-top: 60px;">
+        <h1>Video Relaxation</h1>
+        <a href="#"><input type="submit" value="Logout"></a>
+    </div>
+
+    <div class="kotak" style="background-color: rgba(237, 237, 237, 1);">
+        <ul style="list-style-type:none; margin-top: 50px; margin-left: 30px;">
+            <li><a href="ProfileUser.html">Profile</a></li>
+            <li><a href="PaymentUser.html">Payment</a></li>
+            <li><a href="ScheduleUser.html">Schedule</a></li>
+            <li><a href="VideoUser.html">Video</a></li>
+        </ul>
+    </div>
+
+    <div class="video">
+        <h2>Penghantar Tidur</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6kOkBKsIjiM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <h2 style="margin-top: 50px;">Gerakan Relaksasi</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pi5WhX24uS4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
