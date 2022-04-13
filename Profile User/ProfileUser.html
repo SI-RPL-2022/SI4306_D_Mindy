@@ -1,184 +1,114 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Profile User.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>
-        Profile User
-    </title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+        </script>
 
-        .kotak {
-            position: absolute;
-            width: 256px;
-            height: 640px;
-            left: 0px;
-            top: 90px;
-        }
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title> Profile User </title>
 
-        p {
-            margin-top: 30px;
-            margin-left: 76px;
-            font-family: nunito;
-            font-size: 20px;
-            font-weight: 600;
-            color: rgba(132, 123, 123, 1);
-        }
-
-        .atas {
-            position: absolute;
-            width: 1535px;
-            height: 90px;
-            left: 0px;
-            top: 0px;
-            background-color: rgba(221, 255, 223, 1);
-        }
-
-        h1 {
-            font-family: Nunito;
-            font-style: normal;
-            font-weight: 700;
-            font-size: 48px;
-            line-height: 150%;
-            margin-left: 355px;
-            margin-top: 60px;
-        }
-
-        .foto {
-            width: 300px;
-            height: 300px;
-            margin-left: 286px;
-            margin-top: 50px;
-            border-radius: 200px;
-        }
-
-        .logo {
-            margin-top: 19px;
-            margin-left: 70px;
-        }
-
-        .bio {
-            margin-left: 700px;
-            margin-top: -250px;
-            font-family: nunito;
-        }
-
-        .edit input[type=submit] {
-            width: 200px;
-            height: 49px;
-            background-color: rgba(7, 153, 17, 1);
-            color: rgb(255, 255, 255);
-            font-size: 15px;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-left: 1050px;
-            margin-top: 70px;
-            font-family: nunito;
-        }
-
-        .edit input[type=submit]:hover {
-            background-color: #006103;
-        }
-
-        input[type=submit] {
-            position: absolute;
-            width: 200px;
-            height: 49px;
-            background-color: rgba(7, 153, 17, 1);
-            color: rgb(255, 255, 255);
-            font-size: 15px;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-left: 660px;
-            margin-top: 70px;
-            font-family: nunito;
-            font-weight: bold;
-        }
-
-        input[type=submit]:hover {
-            background-color: #006103;
-        }
-
-        li {
-            margin-top: 20px;
-            font-family: nunito;
-            font-size: 20px;
-            font-weight: 600;
-            color: rgba(132, 123, 123, 1);
-        }
-
-        a {
-            text-decoration: none;
-            color: rgba(132, 123, 123, 1);
-        }
-
-    </style>
 </head>
 
 <body>
 
-    <div class="atas">
-        <a href="#"><img class="logo" src="Mindy.png" height="41" width="86"></a>
+    <header class="navbar navbar-expand-lg navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mindy</a>
+            <div class="d-flex align-items-center">
+                <div class="flex-shrink-0 dropdown">
+                    <label for="profile2" class="profile-dropdown">
+                        <img src="cr7.png" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                            class="rounded-circle">
+                </div>
+            </div>
+        </div>
+    </header><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+                style="min-height: 100vh;">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="ProfileUser.html">
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ScheduleUser.html">
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="PaymentUser.html">
+                                Payments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="VideoUser.html">
+                                Video
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-6">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
+                    <h1>Profile</h1>
+                    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
+                        style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
+                </div>
+
+                <div class="isi" style="display: flex;">
+                    <img src="cr7.png"
+                        style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
+                    <div class="container">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td>Nama</td>
+                                <td>Kang Fix Goal</td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal Lahir</td>
+                                <td>28 Februari 1987</td>
+                            </tr>
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td>Laki-laki</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>fixgoal@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Nomor HP</td>
+                                <td>08987654321</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 
-    <div class="judul" style="display: flex; margin-top: 60px;">
-        <h1>Profile</h1>
-        <a href="#"><input type="submit" value="Logout"></a>
-    </div>
-
-    <div class="kotak" style="background-color: rgba(237, 237, 237, 1);">
-        <ul style="list-style-type:none; margin-top: 50px; margin-left: 30px;">
-            <li><a href="#">Profile</a></li>
-            <li><a href="PaymentUser.html">Payment</a></li>
-            <li><a href="ScheduleUser.html">Schedule</a></li>
-            <li><a href="VideoUser.html">Video</a></li>
-        </ul>
-    </div>
-
-    <img class="foto"
-        src="data:image/jpeg;base64,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">
-
-    <div class="bio">
-        <table class="table table-borderless">
-            <tr>
-                <td>Nama</td>
-                <td>Kang Fix Goal</td>
-            </tr>
-            <tr>
-                <td>Tanggal Lahir</td>
-                <td>28 Februari 1987</td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin</td>
-                <td>Laki-laki</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>fixgoal@gmail.com</td>
-            </tr>
-            <tr>
-                <td>Nomor HP</td>
-                <td>08987654321</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="edit">
-        <a href="#"><input type="submit" value="Edit"></a>
-    </div>
+    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
+        style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-left: 1180px; margin-top: 100px; width: 100px;">Edit</a>
 </body>
 
 </html>
