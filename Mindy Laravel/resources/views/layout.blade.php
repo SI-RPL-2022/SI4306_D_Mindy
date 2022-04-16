@@ -34,7 +34,7 @@
                 <a class="nav-item nav-link mx-3" href="#">About</a>
                 <a class="nav-item nav-link mx-3" href="#">Service</a>
                 <a class="nav-item nav-link mx-3" href="#">Contact</a>
-                <a class="mx-3 nav-item nav-link btn btn-success text-light px-4 rounded-pill" href="#">Start</a>
+                <a class="mx-3 nav-item nav-link btn btn-success text-light px-4 rounded-pill" href="/masuk">Start</a>
             </div>
         </div>
     </nav>

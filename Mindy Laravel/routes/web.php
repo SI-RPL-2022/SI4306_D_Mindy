@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landing');
 });
+
+Route::get('/masuk', function () {
+    return view('login');
+})-> name('masuk');
+// Route::resource('Register', RegistController::class);
+Route::get('daftar', [RegistController::class,'index'])->name('daftar');
+Route::post('daftar', [RegistController::class,'store']);
+Route::get('profile/{id}', [ProfileController::class,'show']);

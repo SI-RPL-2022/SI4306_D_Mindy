@@ -17,7 +17,7 @@
                 <h1>Kesehatan adalah hal yang penting</h1>
                 <p class="mt-3">Menjaga kesehatan mental anda merupakan hal yang harus menjadi sebuah
                     prioritas bagi diri anda.</p>
-                <a href="" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                <a href="/masuk" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
             </div>
             <div class="col-5">
                 <div class="position-absolute bg-success w-100 h-75 rounded-circle" style="opacity: 0.25;"></div>
