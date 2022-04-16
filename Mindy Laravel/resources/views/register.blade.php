@@ -25,7 +25,7 @@
 
     <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
         <div class="row" style="background-color: rgba(221, 255, 223, 1); height: 150vh;">
-            <img src="/xampp/htdocs/SI4306_C_mindy/img/orang1.png" height="800" width="600">
+            <img src="/register/orang1.png" height="800" width="600">
         </div>
 
         <div class="row col-5" style="margin-left: 100px;">
@@ -35,32 +35,32 @@
                 <div class="col-md-6 mb-2">
                     <label for="inputEmail4" class="form-label">First Name</label>
                     <input type="text" class="form-control border border-4 border border-dark" id="inputEmail4"
-                        placeholder="First Name" name="namaDepan" style="height: 60px; border-radius: 40px;">
+                        placeholder="First Name" name="namaDepan" autofocus required style="height: 60px; border-radius: 40px;">
                 </div>
                 <div class="col-md-6 mb-2">
                     <label for="inputPassword4" class="form-label">Last Name</label>
                     <input type="text" class="form-control border border-4 border border-dark" id="inputPassword4"
-                        placeholder="Last Name" name="namaBelakang" style="height: 60px; border-radius: 40px;">
+                        placeholder="Last Name" name="namaBelakang" required style="height: 60px; border-radius: 40px;">
                 </div>
                 <div class="mb-2">
                     <label for="formGroupExampleInput" class="form-label">Email</label>
                     <input type="text" class="form-control border border-4 border border-dark"
-                        id="formGroupExampleInput" placeholder="Email" name="email" style="height: 60px; border-radius: 40px;">
+                        id="formGroupExampleInput" placeholder="Email" name="email" required style="height: 60px; border-radius: 40px;">
                 </div>
                 <div class="mb-2">
                     <label for="formGroupExampleInput" class="form-label">Nomor HP</label>
                     <input type="number" class="form-control border border-4 border border-dark"
-                        id="formGroupExampleInput" placeholder="Nomor HP" name="nomor" style="height: 60px; border-radius: 40px;">
+                        id="formGroupExampleInput" placeholder="Nomor HP" name="nomor" required style="height: 60px; border-radius: 40px;">
                 </div>
                 <div class="mb-2">
                     <label for="formGroupExampleInput" class="form-label">Tanggal Lahir</label>
                     <input type="date" class="form-control border border-4 border border-dark"
-                        id="formGroupExampleInput" placeholder="Tanggal Lahir" name="lahir"
+                        id="formGroupExampleInput" placeholder="Tanggal Lahir" name="lahir" required
                         style="height: 60px; border-radius: 40px;">
                 </div>
                 <div class="mb-2">
                     <label for="inputState" class="form-label">Jenis Kelamin</label>
-                    <select id="inputState" class="form-select border border-4 border border-dark" name="kelamin"
+                    <select id="inputState" class="form-select border border-4 border border-dark" name="kelamin" required
                         style="height: 60px; border-radius: 40px;">
                         <option selected>Pilih</option>
                         <option>Laki-laki</option>
@@ -70,7 +70,7 @@
                 <div class="mb-2">
                     <label for="formGroupExampleInput2" class="form-label">Password</label>
                     <input type="password" class="form-control border border-4 border border-dark"
-                        id="formGroupExampleInput2" placeholder="Password" name="password" style="height: 60px; border-radius: 40px;">
+                        id="formGroupExampleInput2" placeholder="Password" name="password" required style="height: 60px; border-radius: 40px;">
                 </div>
                 <div class="d-flex">
                     <p class="mt-6">Already have an Account?<a href="/masuk"> Login</a></p>
@@ -79,7 +79,7 @@
                 </div>
             </form>
             <div class="d-flex align-items-center">
-                <a href="/"><img src="back.svg" width="40" height="40" style="margin-left: 250px;"></a>
+                <a href="/"><img src="/register/back.svg" width="40" height="40" style="margin-left: 250px;"></a>
                 <a href="/"><p style="margin-top: 17px; font-size: 30px; margin-left: 10px; color: black">Back</p></a>
             </div>
         </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistController;
@@ -22,7 +23,8 @@ Route::get('/', function () {
 Route::get('/masuk', function () {
     return view('login');
 })-> name('masuk');
-// Route::resource('Register', RegistController::class);
+Route::post('/masuk', [LoginController::class,'login']);
 Route::get('daftar', [RegistController::class,'index'])->name('daftar');
 Route::post('daftar', [RegistController::class,'store']);
 Route::get('profile/{id}', [ProfileController::class,'show']);
+Route::get('profile/{id}', [ProfileController::class,'index']);
