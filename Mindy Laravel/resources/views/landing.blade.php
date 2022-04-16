@@ -1,6 +1,15 @@
 @extends('layout')
 @section('content')
 
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css"> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+</script>
+
 <section id="hero">
     <div class="container my-5 py-5">
         <div class="row d-flex justify-content-between align-items-center">
@@ -36,7 +45,7 @@
                     <div class="col">
                         <div class="row d-flex align-items-center justify-content-center">
                             <div class="bg-light p-3 rounded-circle mr-3">
-                                <img src="/Landing Page/v.svg" alt="">
+                                <img src="/Landing Page/check.svg" alt="">
                             </div>
                             <h4>Tersertifikasi</h4>
                         </div>
@@ -64,38 +73,41 @@
                 <div class="row d-flex mt-5">
                     <div class="col border text-left p-4 rounded-lg m-2">
                         <h5>Prod 1</h5>
-                        <h2 class="mb-4">Rp. 25.000</h2>
+                        <h2 class="mb-4">Rp. 80.000</h2>
                         <div class="row d-flex px-3 mb-5">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
                             <p>Pertemuan 1 X 1 Minggu</p>
                         </div>
-                        <a href="" class="btn btn-dark w-100 mt-5">Start</a>
+                        <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod1">Details</a>
+                        <a href="" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
                     <div class="col border text-left p-4 rounded-lg m-2">
                         <h5>Prod 2</h5>
-                        <h2 class="mb-4">Rp. 50.000</h2>
+                        <h2 class="mb-4">Rp. 150.000</h2>
                         <div class="row d-flex px-3">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
                             <p>Pertemuan 3 X 1 Minggu</p>
                         </div>
                         <div class="row d-flex px-3">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Konsultasi via chat 2 X 1 Minggu</p>
+                            <p>Akses Musik dengan Relaxing</p>
                         </div>
-                        <a href="" class="btn btn-dark w-100 mt-5">Start</a>
+                        <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod2">Details</a>
+                        <a href="" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
                     <div class="col border text-left p-4 rounded-lg m-2">
                         <h5>Prod 3</h5>
-                        <h2 class="mb-4">Rp. 100.000</h2>
+                        <h2 class="mb-4">Rp. 200.000</h2>
                         <div class="row d-flex px-3">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
                             <p>Pertemuan 5 X 1 Minggu</p>
                         </div>
                         <div class="row d-flex px-3">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Konsultasi via chat 3 X 1 Minggu</p>
+                            <p>Akses Meditation</p>
                         </div>
-                        <a href="" class="btn btn-dark w-100 mt-5">Start</a>
+                        <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod3">Details</a>
+                        <a href="" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
                 </div>
             </div>
@@ -103,6 +115,67 @@
     </div>
 </section>
 <hr>
+
+<!-- modal details  -->
+<style>
+    .modal-edit {
+        max-width: 40%;
+    }
+</style>
+<div class="modal fade" tabindex="-1" id="prod1" tabindex="-1">
+    <div class="modal-dialog modal-edit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Details </h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li> Sesi temu konseling dengan psikolog bersertifikasi </li>
+                </ul>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="prod2" tabindex="-1">
+    <div class="modal-dialog modal-edit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Details </h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li> Sesi temu konseling dengan psikolog bersertifikasi </li>
+                    <li> Akses layanan playlist musik yang menenangkan jiwa </li>
+                </ul>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" id="prod3" tabindex="-1">
+    <div class="modal-dialog modal-edit">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Details </h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li> Sesi temu konseling dengan psikolog bersertifikasi </li>
+                    <li> Akses berbagai tutorial serta tips meditasi setelah menjalani penatnya hari </li>
+                </ul>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+
+<!-- ----------  -->
 
 <section id="4">
     <div class="container my-5 py-5">
