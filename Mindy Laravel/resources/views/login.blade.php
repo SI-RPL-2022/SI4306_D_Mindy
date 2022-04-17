@@ -23,7 +23,7 @@
 
 <body>
 
-    {{-- @if(session()->has('success'))
+    @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show">
             {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -35,9 +35,9 @@
             {{ session('loginError') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-    @endif --}}
+    @endif
 
-    <form action="profile/{id}" method="post">
+    <form action="/profile" method="post">
         @csrf
         <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
             <div class="row" style="background-color: rgba(221, 255, 223, 1); height: 120vh;">

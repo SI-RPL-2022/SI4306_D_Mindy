@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller{
     public function login(Request $request){
@@ -16,9 +16,10 @@ class LoginController extends Controller{
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('profile/{id}');
+            $data = User::where('email', $request -> email)->first();
+            return redirect()->intended('profile/'. $data->id);
         }
 
-        // return back()->with('loginError', 'Login Failed!');
+        return back()->with('loginError', 'Login Failed!');
     }
 }

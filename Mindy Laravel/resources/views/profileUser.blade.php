@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Profile User.css">
+    <link rel="stylesheet" href="/Profile User/Profile User.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -31,7 +31,7 @@
             <div class="d-flex align-items-center">
                 <div class="flex-shrink-0 dropdown">
                     <label for="profile2" class="profile-dropdown">
-                        <img src="cr7.png" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                        <img src="/Profile User/{{$data->gambar}}" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
                             class="rounded-circle">
                 </div>
             </div>
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="isi" style="display: flex;">
-                    <img src="cr7.png"
+                    <img src="/Profile User/{{$data->gambar}}"
                         style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
                     <div class="container">
                         <table class="table table-borderless">

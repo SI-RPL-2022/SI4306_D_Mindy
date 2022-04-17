@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Register;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 // use Illuminate\Support\Facades\Hash;
@@ -39,13 +39,13 @@ class RegistController extends Controller
     public function store(Request $request)
     {
         $name = $request -> namaDepan . ' '. $request -> namaBelakang;
-        Register::create([
+        User::create([
             'nama' => $name,
             'email' => $request -> email,
             'nomor' => $request -> nomor,
             'lahir' => $request -> lahir,
             'kelamin' => $request -> kelamin,
-            'pass' => Hash::make($request -> password)
+            'password' => Hash::make($request -> password)
         ]);
 
         return redirect('/masuk');
