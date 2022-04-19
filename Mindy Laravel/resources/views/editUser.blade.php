@@ -14,10 +14,14 @@
 
     <div class="container">
         <h1 class="mt-4 mb-4">Edit Profile</h1>
-        <form class="row g-3" action="/profile" method="post" enctype="multipart/form-data">
+        <form class="row g-3" action="/edit/{id}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="col-12">
+                <input type="hidden" class="form-control" id="inputEmail4" name="id" value="{{$data->id}}">
+            </div>
             <div class="col-12">
                 <label for="inputEmail4" class="form-label">Nama</label>
-                <input type="email" class="form-control" id="inputEmail4" name="nama" value="{{$data->nama}}">
+                <input type="text" class="form-control" id="inputEmail4" name="nama" value="{{$data->nama}}">
             </div>
             <div class="col-12">
                 <label for="inputPassword4" class="form-label">Email</label>
@@ -29,7 +33,7 @@
             </div>
             <div class="col-12">
                 <label for="inputAddress2" class="form-label">Tanggal Lahir</label>
-                <input type="text" class="form-control" id="inputAddress2" name="lahir" value="{{$data->lahir}}">
+                <input type="date" class="form-control" id="inputAddress2" name="lahir" value="{{$data->lahir}}">
             </div>
             <div class="col-12">
                 <label for="inputState" class="form-label">Kelamin</label>

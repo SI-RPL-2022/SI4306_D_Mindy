@@ -30,4 +30,5 @@ Route::post('daftar', [RegistController::class,'store']);
 Route::get('profile/{id}', [ProfileController::class,'show']);
 Route::post('/profile', [LoginController::class,'login']);
 Route::get('/edit/{id}', [ProfileController::class,'edit']);
-Route::post('/edit', [ProfileController::class,'update']);
+Route::post('/edit/{id}', [ProfileController::class,'update']);
+Route::get('/logout', [ProfileController::class,'logout']);

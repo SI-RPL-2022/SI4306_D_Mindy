@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ProfileController extends Controller
 {
@@ -71,7 +73,21 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $imgName = User::find($request->id);
+        if ($request->gambar) {
+            $imgName = time() . $request->gambar->getClientOriginalName();
+            $request->gambar->move(public_path('gambar'), $imgName);
+        }
+
+        User::find($request->id)->update([
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'nomor' => $request->nomor,
+            'lahir' => $request->lahir,
+            'kelamin' => $request->kelamin,
+            'gambar' => $imgName,
+        ]);
+        return redirect('profile/'.$request->id);
     }
 
     /**
@@ -80,8 +96,12 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function logout()
     {
-        //
+        Session::flush();
+        
+        Auth::logout();
+
+        return redirect('/masuk');
     }
 }
