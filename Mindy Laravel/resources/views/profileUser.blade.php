@@ -107,7 +107,7 @@
         </div>
     </div>
 
-    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
+    <a href="/edit/{{$data->id}}" class="btn btn-success px-3 py-2 primary-btn mb-5"
         style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-left: 1180px; margin-top: 100px; width: 100px;">Edit</a>
 </body>
 
