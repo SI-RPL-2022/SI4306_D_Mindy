@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,7 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <title> Profile User </title>
+    <title>Payment User</title>
 
 </head>
 
@@ -31,7 +31,7 @@
             <div class="d-flex align-items-center">
                 <div class="flex-shrink-0 dropdown">
                     <label for="profile2" class="profile-dropdown">
-                        <img src="/gambar/{{$data->gambar}}" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                        <img src="cr7.png" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
                             class="rounded-circle">
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="profile/{id}">
+                            <a class="nav-link" aria-current="page" href="profile/{id}">
                                 Profile
                             </a>
                         </li>
@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/payment">
+                            <a class="nav-link active" href="#">
                                 Payments
                             </a>
                         </li>
@@ -70,45 +70,65 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-6">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
-                    <h1>Profile</h1>
-                    <a href="/logout" class="btn btn-success px-3 py-2 primary-btn mb-5"
+                    <h1>Payments</h1>
+                    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
                         style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
                 </div>
-
-                <div class="isi" style="display: flex;">
-                    <img src="/gambar/{{$data->gambar}}"
-                        style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
-                    <div class="container">
-                        <table class="table table-borderless">
+                <div class="container-fluid" style="width: 800px;">
+                    <table class="table table-borderless" style="background-color: #DDFFDF; justify-content: center; margin-top: -5px; margin-left: -5px;">
+                        <thead>
                             <tr>
-                                <td>Nama</td>
-                                <td>{{$data->nama}}</td>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Harga</th>
+                                <th scope="col" width="40px">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Issac Benedikus</td>
+                                <td>Package 1</td>
+                                <td>25.000</td>
+                                <td><a href="#" class="btn btn-success px-4"
+                                        style="border-radius: 30px; font-size: 12px; background-color: #000000;">Lunas</a>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Tanggal Lahir</td>
-                                <td>{{$data->lahir}}</td>
+                                <th scope="row">2</th>
+                                <td>Valir Kagura</td>
+                                <td>Package 2</td>
+                                <td>50.000</td>
+                                <td><a href="#" class="btn btn-success px-4 btn-lg disabled"
+                                        style="border-radius: 30px; font-size: 12px; background-color: #000000;"
+                                        aria-disabled="true">Belum</a></td>
                             </tr>
                             <tr>
-                                <td>Jenis Kelamin</td>
-                                <td>{{$data->kelamin}}</td>
+                                <th scope="row">3</th>
+                                <td>Vallene Putri</td>
+                                <td>Package 3</td>
+                                <td>100.000</td>
+                                <td><a href="#" class="btn btn-success px-4"
+                                        style="border-radius: 30px; font-size: 12px; background-color: #000000;">Lunas</a>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Email</td>
-                                <td>{{$data->email}}</td>
+                                <th scope="row">1</th>
+                                <td>Meidina Bagaskara</td>
+                                <td>Package 1</td>
+                                <td>25.000</td>
+                                <td><a href="#" class="btn btn-success px-4"
+                                        style="border-radius: 30px; font-size: 12px; background-color: #000000;">Lunas
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Nomor HP</td>
-                                <td>{{$data->nomor}}</td>
-                            </tr>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </main>
         </div>
     </div>
 
-    <a href="/edit/{{$data->id}}" class="btn btn-success px-3 py-2 primary-btn mb-5"
-        style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-left: 1180px; margin-top: 100px; width: 100px;">Edit</a>
 </body>
 
 </html>

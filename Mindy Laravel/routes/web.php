@@ -20,6 +20,18 @@ Route::get('/', function () {
     return view('landing');
 });
 
+Route::get('/schedule', function () {
+    return view('scheduleUser');
+});
+
+Route::get('/payment', function () {
+    return view('paymentUser');
+});
+
+Route::get('/video', function () {
+    return view('videoUser');
+});
+
 Route::get('/masuk', function () {
     return view('login');
 })-> name('masuk');

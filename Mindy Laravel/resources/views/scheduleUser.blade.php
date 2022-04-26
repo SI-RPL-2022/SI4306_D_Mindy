@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,7 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <title> Profile User </title>
+    <title>Schedule User</title>
 
 </head>
 
@@ -31,7 +31,7 @@
             <div class="d-flex align-items-center">
                 <div class="flex-shrink-0 dropdown">
                     <label for="profile2" class="profile-dropdown">
-                        <img src="/gambar/{{$data->gambar}}" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                        <img src="cr7.png" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
                             class="rounded-circle">
                 </div>
             </div>
@@ -45,12 +45,12 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="profile/{id}">
+                            <a class="nav-link" aria-current="page" href="profile/{id}">
                                 Profile
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/schedule">
+                            <a class="nav-link active" href="#">
                                 Schedule
                             </a>
                         </li>
@@ -70,36 +70,60 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-6">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
-                    <h1>Profile</h1>
-                    <a href="/logout" class="btn btn-success px-3 py-2 primary-btn mb-5"
+                    <h1>Schedule</h1>
+                    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
                         style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
                 </div>
+                <div class="container-fluid" style="width: 800px;">
+                    <table class="table table-borderless" style="background-color: #DDFFDF; justify-content: center; margin-top: -5px; margin-left: -5px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Tanggal</th>
+                                <th scope="col">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>15-04-2022</td>
+                                <td>meet.balalala</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>16-04-2022</td>
+                                <td>meet.balalala</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>17-04-2022</td>
+                                <td>meet.balalala</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>18-04-2022</td>
+                                <td>meet.balalala</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <div class="isi" style="display: flex;">
-                    <img src="/gambar/{{$data->gambar}}"
-                        style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
-                    <div class="container">
-                        <table class="table table-borderless">
-                            <tr>
-                                <td>Nama</td>
-                                <td>{{$data->nama}}</td>
-                            </tr>
-                            <tr>
-                                <td>Tanggal Lahir</td>
-                                <td>{{$data->lahir}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jenis Kelamin</td>
-                                <td>{{$data->kelamin}}</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>{{$data->email}}</td>
-                            </tr>
-                            <tr>
-                                <td>Nomor HP</td>
-                                <td>{{$data->nomor}}</td>
-                            </tr>
+                    <h1 style="margin-left: -220px; margin-top: 50px;">Contact</h1>
+                    <div class="container-fluid" style="width: 800px; margin-top: 50px;">
+                        <table class="table table-borderless" style="background-color: #DDFFDF; justify-content: center; margin-top: -5px; margin-left: -5px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Whatsapp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>dr. Sitorus Sidragon</td>
+                                    <td>wa.08987654321</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -107,8 +131,6 @@
         </div>
     </div>
 
-    <a href="/edit/{{$data->id}}" class="btn btn-success px-3 py-2 primary-btn mb-5"
-        style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-left: 1180px; margin-top: 100px; width: 100px;">Edit</a>
 </body>
 
 </html>

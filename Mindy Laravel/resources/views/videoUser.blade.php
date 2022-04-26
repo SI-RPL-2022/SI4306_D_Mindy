@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -19,7 +19,7 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <title> Profile User </title>
+    <title>Schedule User</title>
 
 </head>
 
@@ -31,7 +31,7 @@
             <div class="d-flex align-items-center">
                 <div class="flex-shrink-0 dropdown">
                     <label for="profile2" class="profile-dropdown">
-                        <img src="/gambar/{{$data->gambar}}" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                        <img src="cr7.png" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
                             class="rounded-circle">
                 </div>
             </div>
@@ -41,26 +41,26 @@
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
-                style="min-height: 100vh;">
+                style="min-height: 140vh;">
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="profile/{id}">
+                            <a class="nav-link" aria-current="page" href="ProfileUser.html">
                                 Profile
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/schedule">
+                            <a class="nav-link" href="ScheduleUser.html">
                                 Schedule
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/payment">
+                            <a class="nav-link" href="PaymentUser.html">
                                 Payments
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/video">
+                            <a class="nav-link active" href="VideoUser.html">
                                 Video
                             </a>
                         </li>
@@ -70,45 +70,27 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-6">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
-                    <h1>Profile</h1>
-                    <a href="/logout" class="btn btn-success px-3 py-2 primary-btn mb-5"
+                    <h1>Video Relax</h1>
+                    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
                         style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
                 </div>
 
-                <div class="isi" style="display: flex;">
-                    <img src="/gambar/{{$data->gambar}}"
-                        style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
-                    <div class="container">
-                        <table class="table table-borderless">
-                            <tr>
-                                <td>Nama</td>
-                                <td>{{$data->nama}}</td>
-                            </tr>
-                            <tr>
-                                <td>Tanggal Lahir</td>
-                                <td>{{$data->lahir}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jenis Kelamin</td>
-                                <td>{{$data->kelamin}}</td>
-                            </tr>
-                            <tr>
-                                <td>Email</td>
-                                <td>{{$data->email}}</td>
-                            </tr>
-                            <tr>
-                                <td>Nomor HP</td>
-                                <td>{{$data->nomor}}</td>
-                            </tr>
-                        </table>
-                    </div>
+                <div class="video" style="margin-left: 150px;">
+                    <h2>Penghantar Tidur</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6kOkBKsIjiM"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    <h2 style="margin-top: 50px;">Gerakan Relaksasi</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pi5WhX24uS4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </main>
         </div>
     </div>
-
-    <a href="/edit/{{$data->id}}" class="btn btn-success px-3 py-2 primary-btn mb-5"
-        style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-left: 1180px; margin-top: 100px; width: 100px;">Edit</a>
 </body>
 
 </html>
