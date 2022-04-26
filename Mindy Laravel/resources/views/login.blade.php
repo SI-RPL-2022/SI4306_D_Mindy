@@ -36,9 +36,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-
-    <form action="/profile" method="post">
-        @csrf
+        
         <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
             <div class="row" style="background-color: rgba(221, 255, 223, 1); height: 120vh;">
                 <img src="/register/orang1.png" height="800" width="600">
@@ -46,7 +44,8 @@
             
             <div class="row col-5" style="margin-left: 100px;">
                 <h2 class="mb-5" style="margin-top: -150px;">Welcome To Mindy</h2>
-                <form action="/profile" method="post"> 
+                <form action="/profile" method="post">
+                    @csrf
                 <div class="mb-5" style="margin-top: -20px;">
                     <label for="formGroupExampleInput" class="form-label">Email</label>
                     <input type="text" class="form-control border border-4 border border-dark" id="formGroupExampleInput"
@@ -76,7 +75,6 @@
                 </form>
             </div>
         </div>
-    </form>
 
 </body>
 
