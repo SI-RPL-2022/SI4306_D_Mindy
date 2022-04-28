@@ -31,7 +31,7 @@
             <div class="d-flex align-items-center">
                 <div class="flex-shrink-0 dropdown">
                     <label for="profile2" class="profile-dropdown">
-                        <img src="cr7.png" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                        <img src="/gambar/{{Session::get('user')->gambar}}" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
                             class="rounded-circle">
                 </div>
             </div>
@@ -45,22 +45,22 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="ProfileUser.html">
+                            <a class="nav-link" aria-current="page" href="/profile/{{ Session::get('user')->id }}">
                                 Profile
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ScheduleUser.html">
+                            <a class="nav-link" href="/schedule/{{ Session::get('user')->id }}">
                                 Schedule
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PaymentUser.html">
+                            <a class="nav-link" href="/payment/{{ Session::get('user')->id }}">
                                 Payments
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="VideoUser.html">
+                            <a class="nav-link active" href="#">
                                 Video
                             </a>
                         </li>
@@ -71,7 +71,7 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-6">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
                     <h1>Video Relax</h1>
-                    <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
+                    <a href="/logout" class="btn btn-success px-3 py-2 primary-btn mb-5"
                         style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
                 </div>
 

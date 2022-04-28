@@ -45,17 +45,17 @@
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="profile/{id}">
+                            <a class="nav-link active" aria-current="page" href="#">
                                 Profile
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/schedule">
+                            <a class="nav-link" href="/schedule/{{ Session::get('user')->id }}">
                                 Schedule
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/payment">
+                            <a class="nav-link" href="/payment/{{ Session::get('user')->id }}">
                                 Payments
                             </a>
                         </li>

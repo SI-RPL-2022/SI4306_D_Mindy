@@ -100,6 +100,16 @@ class ProfileController extends Controller
     {
         return view('scheduleUser');
     }
+
+    public function payment()
+    {
+        return view('paymentUser');
+    }
+
+    public function video()
+    {
+        return view('videoUser');
+    }
     
      public function logout()
     {
