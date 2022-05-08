@@ -4,7 +4,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistController;
-
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\PaymentController;
+use App\Http\Controllers\Admin\AddProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,3 +50,8 @@ Route::get('/logout', [ProfileController::class,'logout']);
 Route::get('schedule/{userId}', [ProfileController::class,'schedule']);
 Route::get('payment/{userId}', [ProfileController::class,'payment']);
 Route::get('video', [ProfileController::class,'video']);
+Route::get('/admin', [DashboardController::class, 'index']);
+Route::get('/product', [ProductController::class, 'index']);
+Route::get('/payment', [PaymentController::class, 'index']);
+Route::get('/product/add', [ProductController::class, 'create']);
+Route::get('/product/edit', [ProductController::class, 'edit']);
