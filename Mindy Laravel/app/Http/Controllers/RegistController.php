@@ -45,6 +45,7 @@ class RegistController extends Controller
             'nomor' => $request -> nomor,
             'lahir' => $request -> lahir,
             'kelamin' => $request -> kelamin,
+            'user' => $request -> user,
             'password' => Hash::make($request -> password)
         ]);
 

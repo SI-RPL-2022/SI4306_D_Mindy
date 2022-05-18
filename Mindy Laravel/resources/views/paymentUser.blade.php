@@ -27,7 +27,7 @@
 
     <header class="navbar navbar-expand-lg navbar-light sticky-top bg-light flex-md-nowrap p-0 shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mindy</a>
+            <a class="navbar-brand" href="/">Mindy</a>
             <div class="d-flex align-items-center">
                 <div class="flex-shrink-0 dropdown">
                     <label for="profile2" class="profile-dropdown">
@@ -124,6 +124,8 @@
                             </tr>
                         </tbody>
                     </table>
+                    <a href="/layanan" class="btn btn-success px-3 py-2 primary-btn mb-5"
+                        style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Buy Package</a>
                 </div>
             </main>
         </div>

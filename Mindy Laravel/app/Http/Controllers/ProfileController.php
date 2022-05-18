@@ -110,6 +110,19 @@ class ProfileController extends Controller
     {
         return view('videoUser');
     }
+
+    public function akun()
+    {
+        if (Auth::user()->user == 'user'){
+            return redirect()->intended('profile/'. auth::id());
+        }
+        if (auth::user()->user == 'psikolog'){
+            return redirect()->intended('/psikolog'. auth::id());
+        }
+        if (auth::user()->user == 'admin'){
+            return redirect()->intended('/admin');
+        }
+    }
     
      public function logout()
     {

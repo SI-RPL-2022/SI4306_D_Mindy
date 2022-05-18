@@ -19,7 +19,15 @@ class LoginController extends Controller{
             $request->session()->regenerate();
             $data = User::where('email', $request -> email)->first();
             Session::put('user', $data);
-            return redirect()->intended('profile/'. $data->id);
+            if ($data->user == 'user'){
+                return redirect()->intended('profile/'. $data->id);
+            }
+            if ($data->user == 'psikolog'){
+                return redirect()->intended('/psikolog'. $data->id);
+            }
+            if ($data->user == 'admin'){
+                return redirect()->intended('/admin');
+            }
         }
 
         return back()->with('loginError', 'Login Failed!');

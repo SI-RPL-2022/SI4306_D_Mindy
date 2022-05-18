@@ -34,7 +34,21 @@
                 <a class="nav-item nav-link mx-3" href="#">About</a>
                 <a class="nav-item nav-link mx-3" href="#">Service</a>
                 <a class="nav-item nav-link mx-3" href="#">Contact</a>
-                <a class="mx-3 nav-item nav-link btn btn-success text-light px-4 rounded-pill" href="/masuk">Start</a>
+                @if (auth()->user())
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ auth()->user()->nama }}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="/landing">Dashboard</a></li>
+                          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                        </ul>
+                      </div>
+                
+                @else 
+                    <a class="mx-3 nav-item nav-link btn btn-success text-light px-4 rounded-pill" href="/masuk">Start</a>
+                
+                @endif
             </div>
         </div>
     </nav>

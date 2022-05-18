@@ -63,8 +63,17 @@
                     <select id="inputState" class="form-select border border-4 border border-dark" name="kelamin" required
                         style="height: 60px; border-radius: 40px;">
                         <option selected>Pilih</option>
-                        <option>Laki-laki</option>
-                        <option>Perempuan</option>
+                        <option value="laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label for="inputState" class="form-label">User</label>
+                    <select id="inputState" class="form-select border border-4 border border-dark" name="user" required
+                        style="height: 60px; border-radius: 40px;">
+                        <option selected>Pilih</option>
+                        <option value="user">User</option>
+                        <option value="psikolog">Psikolog</option>
                     </select>
                 </div>
                 <div class="mb-2">

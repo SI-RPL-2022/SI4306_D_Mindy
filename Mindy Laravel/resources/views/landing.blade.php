@@ -20,7 +20,7 @@
                 <h1>Kesehatan adalah hal yang penting</h1>
                 <p class="mt-3">Menjaga kesehatan mental anda merupakan hal yang harus menjadi sebuah
                     prioritas bagi diri anda.</p>
-                <a href="/masuk" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                <a href="/layanan" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
             </div>
             <div class="col-5">
                 <div class="position-absolute bg-success w-100 h-75 rounded-circle" style="opacity: 0.25;"></div>
@@ -82,7 +82,7 @@
                             <p>Pertemuan 1 X 1 Minggu</p>
                         </div>
                         <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod1">Details</a>
-                        <a href="" class="btn btn-success w-100 mt-3">Start</a>
+                        <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
                     <div class="col border text-left p-4 rounded-lg m-2">
                         <h5>Prod 2</h5>
@@ -96,7 +96,7 @@
                             <p>Akses Musik dengan Relaxing</p>
                         </div>
                         <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod2">Details</a>
-                        <a href="" class="btn btn-success w-100 mt-3">Start</a>
+                        <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
                     <div class="col border text-left p-4 rounded-lg m-2">
                         <h5>Prod 3</h5>
@@ -110,7 +110,7 @@
                             <p>Akses Meditation</p>
                         </div>
                         <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod3">Details</a>
-                        <a href="" class="btn btn-success w-100 mt-3">Start</a>
+                        <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
                 </div>
             </div>

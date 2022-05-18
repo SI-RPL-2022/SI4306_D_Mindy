@@ -7,7 +7,8 @@ use App\Http\Controllers\RegistController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\PaymentController;
-use App\Http\Controllers\Admin\AddProductController;
+use App\Http\Controllers\LayananController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +56,7 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::get('/payment', [PaymentController::class, 'index']);
 Route::get('/product/add', [ProductController::class, 'create']);
 Route::get('/product/edit', [ProductController::class, 'edit']);
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/layanan', [LayananController::class, 'index']);
+    Route::get('/landing', [ProfileController::class, 'akun']);
+});

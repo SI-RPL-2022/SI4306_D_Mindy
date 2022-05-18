@@ -5,7 +5,7 @@
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-6">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
         <h1>Product</h1>
-        <a href="#"class="btn btn-success px-3 py-2 primary-btn mb-5" style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
+        <a href="/logout"class="btn btn-success px-3 py-2 primary-btn mb-5" style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
     </div>
     <div class="container-fluid" style="width: 850px;margin-left: 80px;">
         <form>
