@@ -20,8 +20,17 @@
                 <h1>Kesehatan adalah hal yang penting</h1>
                 <p class="mt-3">Menjaga kesehatan mental anda merupakan hal yang harus menjadi sebuah
                     prioritas bagi diri anda.</p>
+            @if (Auth::check() and Auth::user()->user == 'user')
                 <a href="/layanan" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+            @elseif (Auth::check() and Auth::user()->user == 'admin')
+
+            @elseif (Auth::check() and Auth::user()->user == 'psikolog')
+
+            @else
+                <a href="/masuk" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+            @endif
             </div>
+            
             <div class="col-5">
                 <div class="position-absolute bg-success w-100 h-75 rounded-circle" style="opacity: 0.25;"></div>
                 <img src="/Landing Page/Person.svg" alt="" class="position-relative">
