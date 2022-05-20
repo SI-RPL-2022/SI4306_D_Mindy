@@ -24,16 +24,16 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light mx-5 my-3  ">
-        <a class="navbar-brand font-weight-bold fs-4" href="#">Mindy</a>
+        <a class="navbar-brand font-weight-bold fs-4" href="/">Mindy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link mx-3" href="#">About</a>
-                <a class="nav-item nav-link mx-3" href="#">Service</a>
-                <a class="nav-item nav-link mx-3" href="#">Contact</a>
+                <a class="nav-item nav-link mx-3" href="#1">About</a>
+                <a class="nav-item nav-link mx-3" href="#3">Service</a>
+                <a class="nav-item nav-link mx-3" href="#6">Contact</a>
                 @if (auth()->user())
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
