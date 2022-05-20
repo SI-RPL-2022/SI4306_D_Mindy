@@ -224,7 +224,7 @@
 </section>
 <hr>
 
-<section class="6">
+<section id="6">
     <div class="container my-5 py-5">
         <h2 class="text-center">Kunjungi Kami</h2>
         <div class="row d-flex justify-content-between mt-5">

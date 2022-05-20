@@ -31,7 +31,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link mx-3" href="#1">About</a>
+                <a class="nav-item nav-link mx-3" href="#hero">About</a>
                 <a class="nav-item nav-link mx-3" href="#3">Service</a>
                 <a class="nav-item nav-link mx-3" href="#6">Contact</a>
                 @if (auth()->user())
