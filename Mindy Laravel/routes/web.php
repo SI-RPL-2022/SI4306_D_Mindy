@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\PsikologController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/layanan', [LayananController::class, 'index']);
     Route::get('/landing', [ProfileController::class, 'akun']);
 });
+
+Route::get('psikolog/{id}', [PsikologController::class, 'index']);
+Route::get('/chat', [PsikologController::class, 'chat']);
+Route::get('/profile', [PsikologController::class, 'profile']);
