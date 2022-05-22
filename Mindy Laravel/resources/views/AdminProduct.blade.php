@@ -11,33 +11,52 @@
         <table class="table table-borderless">
         <thead>
             <tr>
-            <th scope="col">No</th>
-            <th scope="col">Nama</th>
-            <th scope="col">Harga</th>
-            <th scope="col" width="30px">Status</th>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Harga</th>
+                <th scope="col" width="30px">Action</th>
+                <th scope="col" width="30px" ></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-            <th scope="row">1</th>
-            <td>Package 1</td>
-            <td>25.000</td>
-            <td><a href="/product/edit" class="btn btn-success px-4"
-                style="border-radius: 30px; font-size: 12px; background-color: #000000;">Edit</a></td>
+                <th scope="row">1</th>
+                <td>Package 1</td>
+                <td>25.000</td>
+                <td>
+                    <a href="/product/edit" class="btn btn-warning px-4"
+                    style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
+                </td>
+                <td>
+                    <a href="/product/edit" class="btn btn-danger px-4" 
+                    style="border-radius: 30px; font-size: 12px;">Delete</a>
+                </td>
             </tr>
             <tr>
-            <th scope="row">2</th>
-            <td>Package 2</td>
-            <td>50.000</td>
-            <td><a href="/product/edit" class="btn btn-success px-4"
-                style="border-radius: 30px; font-size: 12px; background-color: #000000;">Edit</a></td>
+                <th scope="row">2</th>
+                <td>Package 2</td>
+                <td>50.000</td>
+                <td>
+                    <a href="/product/edit" class="btn btn-warning px-4"
+                    style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
+                </td>
+                <td>
+                    <a href="/product/edit" class="btn btn-danger px-4" 
+                    style="border-radius: 30px; font-size: 12px;">Delete</a>
+                </td>
             </tr>
             <tr>
-            <th scope="row">3</th>
-            <td>Package 3</td>
-            <td>100.000</td>
-            <td><a href="/product/edit" class="btn btn-success px-4"
-                style="border-radius: 30px; font-size: 12px; background-color: #000000;">Edit</a></td>
+                <th scope="row">3</th>
+                <td>Package 3</td>
+                <td>100.000</td>
+                <td>
+                    <a href="/product/edit" class="btn btn-warning px-4"
+                    style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
+                </td>
+                <td>
+                    <a href="/product/edit" class="btn btn-danger px-4" 
+                    style="border-radius: 30px; font-size: 12px;">Delete</a>
+                </td>
             </tr>
         </tbody>
         </table>
