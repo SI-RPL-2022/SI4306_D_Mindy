@@ -16,7 +16,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-       return view('user.profileUser'); 
+        return view('user.profileUser');
     }
 
     /**
@@ -49,7 +49,7 @@ class ProfileController extends Controller
     public function show($id)
     {
         $data = User::find($id);
-        return view('user.profileUser',compact('data'));
+        return view('user.profileUser', compact('data'));
     }
 
     /**
@@ -61,7 +61,7 @@ class ProfileController extends Controller
     public function edit($id)
     {
         $data = User::find($id);
-        return view('user.editUser',compact('data'));
+        return view('user.editUser', compact('data'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ProfileController extends Controller
             'kelamin' => $request->kelamin,
             'gambar' => $imgName,
         ]);
-        return redirect('profile/'.$request->id);
+        return redirect('profile/' . $request->id);
     }
 
     /**
@@ -113,23 +113,33 @@ class ProfileController extends Controller
 
     public function akun()
     {
-        if (Auth::user()->user == 'user'){
-            return redirect()->intended('profile/'. auth::id());
+        if (Auth::user()->user == 'user') {
+            return redirect()->intended('profile/' . auth::id());
         }
-        if (auth::user()->user == 'psikolog'){
-            return redirect()->intended('psikolog/'. auth::id());
+        if (auth::user()->user == 'psikolog') {
+            return redirect()->intended('psikolog/' . auth::id());
         }
-        if (auth::user()->user == 'admin'){
+        if (auth::user()->user == 'admin') {
             return redirect()->intended('/admin');
         }
     }
-    
-     public function logout()
+
+    public function logout()
     {
         Session::flush();
-        
+
         Auth::logout();
 
         return redirect('/masuk');
+    }
+
+    public function choosePayment()
+    {
+        return view("user.payment");
+    }
+
+    public function checkout()
+    {
+        return view("user.chose");
     }
 }

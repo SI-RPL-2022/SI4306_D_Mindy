@@ -39,19 +39,19 @@ Route::get('/', function () {
 
 Route::get('/masuk', function () {
     return view('login');
-})-> name('masuk');
+})->name('masuk');
 
-Route::post('/profile', [LoginController::class,'login']);
-Route::post('/masuk', [LoginController::class,'login']);
-Route::get('daftar', [RegistController::class,'index'])->name('daftar');
-Route::post('daftar', [RegistController::class,'store']);
-Route::get('profile/{id}', [ProfileController::class,'show']);
-Route::get('/edit/{id}', [ProfileController::class,'edit']);
-Route::post('/edit/{id}', [ProfileController::class,'update']);
-Route::get('/logout', [ProfileController::class,'logout']);
-Route::get('schedule/{userId}', [ProfileController::class,'schedule']);
-Route::get('payment/{userId}', [ProfileController::class,'payment']);
-Route::get('video', [ProfileController::class,'video']);
+Route::post('/profile', [LoginController::class, 'login']);
+Route::post('/masuk', [LoginController::class, 'login']);
+Route::get('daftar', [RegistController::class, 'index'])->name('daftar');
+Route::post('daftar', [RegistController::class, 'store']);
+Route::get('profile/{id}', [ProfileController::class, 'show']);
+Route::get('/edit/{id}', [ProfileController::class, 'edit']);
+Route::post('/edit/{id}', [ProfileController::class, 'update']);
+Route::get('/logout', [ProfileController::class, 'logout']);
+Route::get('schedule/{userId}', [ProfileController::class, 'schedule']);
+Route::get('payment/{userId}', [ProfileController::class, 'payment']);
+Route::get('video', [ProfileController::class, 'video']);
 Route::get('/admin', [DashboardController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
 Route::get('/payment', [PaymentController::class, 'index']);
@@ -65,3 +65,6 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('psikolog/{id}', [PsikologController::class, 'index']);
 Route::get('/chat', [PsikologController::class, 'chat']);
 Route::get('/profile', [PsikologController::class, 'profile']);
+
+Route::get('/choose-payment', [profileController::class, 'choosePayment']);
+Route::get('/checkout', [profileController::class, 'checkout']);
