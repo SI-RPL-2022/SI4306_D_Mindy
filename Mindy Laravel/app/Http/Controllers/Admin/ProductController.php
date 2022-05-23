@@ -10,15 +10,15 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('AdminProduct');
+        return view('admin.AdminProduct');
     }
 
     public function create()
     {
-        return view('AddProduct');
+        return view('admin.AddProduct');
     }
     public function edit()
     {
-        return view('EditProduct');
+        return view('admin.EditProduct');
     }
 }

@@ -10,6 +10,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('performance');
+        return view('admin.performance');
     }
 }

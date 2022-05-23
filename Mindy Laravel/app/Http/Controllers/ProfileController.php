@@ -16,7 +16,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-       return view('profileUser'); 
+       return view('user.profileUser'); 
     }
 
     /**
@@ -49,7 +49,7 @@ class ProfileController extends Controller
     public function show($id)
     {
         $data = User::find($id);
-        return view('profileUser',compact('data'));
+        return view('user.profileUser',compact('data'));
     }
 
     /**
@@ -61,7 +61,7 @@ class ProfileController extends Controller
     public function edit($id)
     {
         $data = User::find($id);
-        return view('editUser',compact('data'));
+        return view('user.editUser',compact('data'));
     }
 
     /**
@@ -98,17 +98,17 @@ class ProfileController extends Controller
      */
     public function schedule()
     {
-        return view('scheduleUser');
+        return view('user.scheduleUser');
     }
 
     public function payment()
     {
-        return view('paymentUser');
+        return view('user.paymentUser');
     }
 
     public function video()
     {
-        return view('videoUser');
+        return view('user.videoUser');
     }
 
     public function akun()
