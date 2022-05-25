@@ -65,6 +65,8 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('psikolog/{id}', [PsikologController::class, 'index']);
 Route::get('/chat', [PsikologController::class, 'chat']);
 Route::get('/profile', [PsikologController::class, 'profile']);
+Route::get('profil/{id}', [PsikologController::class, 'show']);
+
 
 Route::get('/choose-payment', [profileController::class, 'choosePayment']);
 Route::get('/checkout', [profileController::class, 'checkout']);

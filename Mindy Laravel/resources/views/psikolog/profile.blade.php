@@ -1,28 +1,39 @@
-@extends('/psikolog/layout')
+@extends('psikolog.app')
 @section('content')
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Dashboard Psikolog/Dashboard Psikolog.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-          </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-          integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-          </script>
-      
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script src="https://unpkg.com/feather-icons"></script>
-        <title> Mindy Dashboard </title>
-      </head>
-    
-    <h1>Chat</h1>
-</html>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-8 pb-2 mb-3">
+  <h1>Profile</h1>
+  <a href="#" class="btn btn-success px-3 py-2 primary-btn mb-5"
+      style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Logout</a>
+</div>
+<div class="isi" style="display: flex;">
+  <img src=""
+      style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
+  <div>
+      <div class="container ">
+          <table class="table table-borderless " style="background-color: #fff;">
+              <tr>
+                  <td>Nama</td>
+                  <td>Petrus</td>
+              </tr>
+              <tr>
+                  <td>Tanggal Lahir</td>
+                  <td>12 - 09 - 1975</td>
+              </tr>
+              <tr>
+                  <td>Jenis Kelamin</td>
+                  <td>Laki - Laki</td>
+              </tr>
+              <tr>
+                  <td>Email</td>
+                  <td>Petrus@gmail.com</td>
+              </tr>
+              <tr>
+                  <td>Nomor HP</td>
+                  <td>087796095781</td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>
 @endsection
