@@ -4,7 +4,7 @@
       <div class="d-flex align-items-center">
           <div class="flex-shrink-0 dropdown">
               <label for="profile2" class="profile-dropdown">
-                  <img src="" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
+                  <img src="/gambar/{{auth()->user()->gambar}}" alt="mdo" style="width: 40px;height: 40px;left: 1340px;top: 20px;"
                       class="rounded-circle">
           </div>
       </div>
@@ -28,7 +28,7 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link active" href="profil/{id}">
+                      <a class="nav-link" href="/profil/{{auth()->user()->id}}">
                           Profile
                       </a>
                   </li>
