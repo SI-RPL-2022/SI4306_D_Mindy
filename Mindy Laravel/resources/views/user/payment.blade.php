@@ -42,7 +42,7 @@
                     </label>
                 </div>
                 <a href="/payment/{{ Session::get('user')->id }}" class="bg-danger fontcolor-light mt-5 btn btn-success py-2 px-5 mb-5 rounded-pill">Cancel</a>
-                <a href="/checkout" class="bg-dark fontcolor-light mt-5 btn btn-success ml-3  py-2 px-5 mb-5 rounded-pill">Next</a>
+                <a href="/bayar" class="bg-dark fontcolor-light mt-5 btn btn-success ml-3  py-2 px-5 mb-5 rounded-pill">Next</a>
             </div>
         </div>
     </div>

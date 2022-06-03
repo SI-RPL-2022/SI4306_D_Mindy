@@ -133,12 +133,12 @@ class ProfileController extends Controller
         return redirect('/masuk');
     }
 
-    public function choosePayment()
+    public function pilihLayanan()
     {
-        return view("user.payment");
+        return view("pilihLayanan");
     }
 
-    public function checkout()
+    public function bayar()
     {
         return view("user.chose");
     }

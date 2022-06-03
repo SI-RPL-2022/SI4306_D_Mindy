@@ -39,8 +39,8 @@
                 <label for="inputState" class="form-label">Kelamin</label>
                 <select id="inputState" class="form-select" name="kelamin">
                     <option selected>{{$data->kelamin}}</option>
-                    <option>Laki-laki</option>
-                    <option>Perempuan</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
                 </select>
             </div>
             <div class="mb-3">

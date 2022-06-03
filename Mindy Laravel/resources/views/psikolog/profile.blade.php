@@ -9,9 +9,9 @@
 <div class="isi" style="display: flex;">
   <img src="/gambar/{{$data->gambar}}"
       style=" width: 300px;height: 300px;left: 406px;top: 260px; margin-left: 150px; border-radius: 50%;">
-  <div>
-      <div class="container ">
-          <table class="table table-borderless " style="background-color: #fff;">
+<div>
+      <div class="container">
+          <table class="table table-borderless" style="background-color: #fff;">
               <tr>
                   <td>Nama</td>
                   <td>{{$data->nama}}</td>

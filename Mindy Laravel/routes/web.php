@@ -68,5 +68,5 @@ Route::get('/profile', [PsikologController::class, 'profile']);
 Route::get('profil/{id}', [PsikologController::class, 'show']);
 
 
-Route::get('/choose-payment', [profileController::class, 'choosePayment']);
-Route::get('/checkout', [profileController::class, 'checkout']);
+Route::get('/pilih', [profileController::class, 'pilihLayanan']);
+Route::get('/bayar', [profileController::class, 'bayar']);
