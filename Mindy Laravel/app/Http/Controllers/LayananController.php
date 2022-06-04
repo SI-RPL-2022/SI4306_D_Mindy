@@ -21,6 +21,9 @@ class LayananController extends Controller
     return $next($request);
 }
     public function index(Request $request) {
-        return view('pilihLayanan');
+        $items = layanan::all();
+        return view('pilihLayanan', [
+            'items'=>$items
+        ]);
     }
 }

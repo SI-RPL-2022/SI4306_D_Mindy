@@ -19,48 +19,29 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Package 1</td>
-                <td>25.000</td>
-                <td>
-                    <a href="/product/edit" class="btn btn-warning px-4"
-                    style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
-                </td>
-                <td>
-                    <a href="/product/edit" class="btn btn-danger px-4" 
-                    style="border-radius: 30px; font-size: 12px;">Delete</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Package 2</td>
-                <td>50.000</td>
-                <td>
-                    <a href="/product/edit" class="btn btn-warning px-4"
-                    style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
-                </td>
-                <td>
-                    <a href="/product/edit" class="btn btn-danger px-4" 
-                    style="border-radius: 30px; font-size: 12px;">Delete</a>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Package 3</td>
-                <td>100.000</td>
-                <td>
-                    <a href="/product/edit" class="btn btn-warning px-4"
-                    style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
-                </td>
-                <td>
-                    <a href="/product/edit" class="btn btn-danger px-4" 
-                    style="border-radius: 30px; font-size: 12px;">Delete</a>
-                </td>
-            </tr>
+            @foreach ($items as $item)
+                <tr>
+                    <th>{{ $item->id }}</th>
+                    <td>{{ $item->nama }}</td>
+                    <td>{{ $item->harga }}</td>
+                    <td>
+                        <a href="/product/edit/{{ $item->id }}" class="btn btn-warning px-4"
+                        style="border-radius: 30px; font-size: 12px; color: #ffffff">Edit</a>
+                    </td>
+                    <td>
+                        <form action="/product/destroy/{{ $item->id }}" method="POST" class="d-inline">
+                            @csrf
+                            <button class="btn btn-danger px-4" style="border-radius: 30px; font-size: 12px;">
+                                Delete
+                            </button>
+                        </form>
+                       
+                    </td>
+                </tr>
+           @endforeach
         </tbody>
-        </table>
-        <a href="/product/add" style="color: #000000;">
+    </table>
+        <a href="/product/AddProduct" style="color: #000000;">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-circle"
             viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />

@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PsikologController;
+use App\Http\Controllers\Admin\ProductRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,8 +56,11 @@ Route::get('video', [ProfileController::class, 'video']);
 Route::get('/admin', [DashboardController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
 Route::get('/payment', [PaymentController::class, 'index']);
-Route::get('/product/add', [ProductController::class, 'create']);
-Route::get('/product/edit', [ProductController::class, 'edit']);
+Route::get('/product/AddProduct', function () { return view('/admin/AddProduct');});
+Route::post('/product/add', [ProductController::class, 'store']);
+Route::get('/product/edit/{id}', [ProductController::class, 'edit']);
+Route::post('/product/update/{id}', [ProductController::class, 'update']);
+Route::post('/product/destroy/{id}', [ProductController::class, 'destroy']);
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/layanan', [LayananController::class, 'index']);
     Route::get('/landing', [ProfileController::class, 'akun']);
