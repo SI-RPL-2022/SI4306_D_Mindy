@@ -53,6 +53,8 @@ Route::get('/logout', [ProfileController::class, 'logout']);
 Route::get('schedule/{userId}', [ProfileController::class, 'schedule']);
 Route::get('payment/{userId}', [ProfileController::class, 'payment']);
 Route::get('video', [ProfileController::class, 'video']);
+
+//Admin
 Route::get('/admin', [DashboardController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
 Route::get('/payment', [PaymentController::class, 'index']);
@@ -61,6 +63,8 @@ Route::post('/product/add', [ProductController::class, 'store']);
 Route::get('/product/edit/{id}', [ProductController::class, 'edit']);
 Route::post('/product/update/{id}', [ProductController::class, 'update']);
 Route::post('/product/destroy/{id}', [ProductController::class, 'destroy']);
+
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/layanan', [LayananController::class, 'index']);
     Route::get('/landing', [ProfileController::class, 'akun']);
