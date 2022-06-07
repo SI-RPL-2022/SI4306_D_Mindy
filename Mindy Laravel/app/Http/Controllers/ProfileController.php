@@ -132,14 +132,4 @@ class ProfileController extends Controller
 
         return redirect('/masuk');
     }
-
-    public function pilihLayanan()
-    {
-        return view("pilihLayanan");
-    }
-
-    public function bayar()
-    {
-        return view("user.chose");
-    }
 }

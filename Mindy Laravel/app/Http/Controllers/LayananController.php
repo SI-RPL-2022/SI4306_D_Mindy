@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Layanan;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -21,9 +22,7 @@ class LayananController extends Controller
     return $next($request);
 }
     public function index(Request $request) {
-        $items = layanan::all();
-        return view('pilihLayanan', [
-            'items'=>$items
-        ]);
+        $data = Layanan::get();
+        return view('pilihLayanan', compact('data'));
     }
 }

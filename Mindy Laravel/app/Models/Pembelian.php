@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Layanan extends Model
+class Pembelian extends Model
 {
-    protected $table = "products";
+    protected $table = "pembelians";
     use HasFactory;
     public $timestamps = false;
     protected $guarded = ["id"];

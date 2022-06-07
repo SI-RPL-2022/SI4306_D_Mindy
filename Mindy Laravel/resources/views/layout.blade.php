@@ -36,7 +36,7 @@
                 <a class="nav-item nav-link mx-3" href="#6">Contact</a>
                 @if (auth()->user())
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ auth()->user()->nama }}
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">

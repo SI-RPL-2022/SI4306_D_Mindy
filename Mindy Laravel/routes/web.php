@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PsikologController;
 use App\Http\Controllers\Admin\ProductRequest;
+use App\Http\Controllers\PembelianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,18 +29,6 @@ use App\Http\Controllers\Admin\ProductRequest;
 // });
 
 Route::get('/', [LandingController::class, 'index']);
-
-// Route::get('/schedule', function () {
-//     return view('scheduleUser');
-// });
-
-// Route::get('/payment', function () {
-//     return view('paymentUser');
-// });
-
-// Route::get('/video', function () {
-//     return view('videoUser');
-// });
 
 Route::get('/masuk', function () {
     return view('login');
@@ -79,5 +68,5 @@ Route::get('/profile', [PsikologController::class, 'profile']);
 Route::get('profil/{id}', [PsikologController::class, 'show']);
 
 
-Route::get('/pilih', [profileController::class, 'pilihLayanan']);
-Route::get('/bayar', [profileController::class, 'bayar']);
+Route::get('/pilih', [PembelianController::class, 'pilih']);
+Route::post('/beli', [PembelianController::class, 'beli']);

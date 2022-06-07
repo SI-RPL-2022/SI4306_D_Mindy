@@ -21,7 +21,7 @@
                 <h5 class="mt-5">Package Yang Di Pilih</h5>
                 <div class="col-md-5">
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Package 1</option>
+                        <option selected value="{{$data->pilihan}}">{{$data->pilihan}}</option>
                     </select>
                 </div>
                 <h5 class="mt-4">Pilih Dokter</h5>
