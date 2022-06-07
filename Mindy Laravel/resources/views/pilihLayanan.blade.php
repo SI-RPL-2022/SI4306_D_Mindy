@@ -37,7 +37,7 @@
                         </select>
                     </div>
                     <h4 class="mt-3">Total Pesanan =</h4>
-                    <a href="/pilih" class="mt-3 me-3 btn btn-danger py-2 px-5 mb-5 rounded-pill">Back</a>
+                    <a href="/" class="mt-3 me-3 btn btn-danger py-2 px-5 mb-5 rounded-pill">Back</a>
                     <a href="payment/{id}" class="mt-3 btn btn-success ml-3 py-2 px-5 mb-5 rounded-pill">Buy</a>
                 </form>
             </div>
