@@ -83,44 +83,18 @@
                 <h2>Pricelist</h2>
                 <p class="mb-5">Menawarkan harga yang menarik</p>
                 <div class="row d-flex mt-5">
+                    @foreach($items as $item)
                     <div class="col border text-left p-4 rounded-lg m-2">
-                        <h5>Prod 1</h5>
-                        <h2 class="mb-4">Rp. 80.000</h2>
+                        <h5>{{ $item->nama }}</h5>
+                        <h2 class="mb-4">{{ $item->harga}}</h2>
                         <div class="row d-flex px-3 mb-5">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Pertemuan 1 X 1 Minggu</p>
+                            <p>{{ $item->service }}</p>
                         </div>
                         <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod1">Details</a>
                         <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
                     </div>
-                    <div class="col border text-left p-4 rounded-lg m-2">
-                        <h5>Prod 2</h5>
-                        <h2 class="mb-4">Rp. 150.000</h2>
-                        <div class="row d-flex px-3">
-                            <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Pertemuan 3 X 1 Minggu</p>
-                        </div>
-                        <div class="row d-flex px-3">
-                            <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Akses Musik dengan Relaxing</p>
-                        </div>
-                        <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod2">Details</a>
-                        <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
-                    </div>
-                    <div class="col border text-left p-4 rounded-lg m-2">
-                        <h5>Prod 3</h5>
-                        <h2 class="mb-4">Rp. 200.000</h2>
-                        <div class="row d-flex px-3">
-                            <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Pertemuan 5 X 1 Minggu</p>
-                        </div>
-                        <div class="row d-flex px-3">
-                            <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>Akses Meditation</p>
-                        </div>
-                        <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod3">Details</a>
-                        <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

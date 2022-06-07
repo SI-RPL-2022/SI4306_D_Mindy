@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,11 @@ use App\Http\Controllers\Admin\ProductRequest;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+// Route::get('/', function () {
+//     return view('landing');
+// });
+
+Route::get('/', [LandingController::class, 'index']);
 
 // Route::get('/schedule', function () {
 //     return view('scheduleUser');
