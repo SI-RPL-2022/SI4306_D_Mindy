@@ -13,7 +13,7 @@
             <div class="row mb-3">
                 <label for="nama" class="col-sm-3 col-form-label">Nama</label>
                 <div class="col-sm-7">
-                <input type="text" class="form-control" name="nama" placeholder="Nama" value="{{ $item->nama }}"> 
+                <input type="text" class="form-control" name="paket" placeholder="Paket" value="{{ $item->paket }}"> 
                 </div>
             </div>
             <div class="row mb-3">

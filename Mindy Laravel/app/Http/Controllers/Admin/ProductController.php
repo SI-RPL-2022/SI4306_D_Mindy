@@ -45,7 +45,7 @@ class ProductController extends Controller
 
         $item = product::find($id);
 
-        $item->nama = $request['nama'];
+        $item->nama = $request['paket'];
         $item->harga = $request['harga'];
         $item->service = $request['service'];
         $item->save();

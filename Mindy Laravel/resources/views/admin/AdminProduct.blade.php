@@ -19,10 +19,16 @@
             </tr>
         </thead>
         <tbody>
+            @php
+                $count = 0;
+            @endphp
             @foreach ($items as $item)
+            @php
+                $count += 1;
+            @endphp
                 <tr>
-                    <th>{{ $item->id }}</th>
-                    <td>{{ $item->nama }}</td>
+                    <th>{{ $count }}</th>
+                    <td>{{ $item->paket }}</td>
                     <td>{{ $item->harga }}</td>
                     <td>
                         <a href="/product/edit/{{ $item->id }}" class="btn btn-warning px-4"

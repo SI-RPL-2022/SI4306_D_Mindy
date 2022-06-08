@@ -85,7 +85,7 @@
                 <div class="row d-flex mt-5">
                     @foreach($items as $item)
                     <div class="col border text-left p-4 rounded-lg m-2">
-                        <h5>{{ $item->nama }}</h5>
+                        <h5>{{ $item->paket }}</h5>
                         <h2 class="mb-4">{{ $item->harga}}</h2>
                         <div class="row d-flex px-3 mb-5">
                             <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">

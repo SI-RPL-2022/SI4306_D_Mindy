@@ -21,7 +21,9 @@ class PembelianController extends Controller
 
     public function pilih()
     {
-        $data = Layanan::get(). User::get();
+        $layanan = Layanan::get();
+        $user = User::get();
+        $data = $layanan->concat($user);
         return view('pilihLayanan', compact('data'));
     }
 }

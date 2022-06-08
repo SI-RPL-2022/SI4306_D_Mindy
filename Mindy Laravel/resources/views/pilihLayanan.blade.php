@@ -23,22 +23,23 @@
                     @csrf
                     <div class="col-md-5">
                         <select class="form-select" aria-label="Default select example" name="pilihan">
-                            <option selected value="Package 1">Package 1</option>
+                            <option>Pilih</option>
                             @foreach ($data as $item)
-                            <option value="{{$item->nama}}">{{$item->nama}}</option>
+                            <option value="{{$item->paket}}">{{$item->paket}}</option>
                             @endforeach
                         </select>
                     </div>
                     <h5 class="mt-4">Pilih Dokter</h5>
                     <div class="col-md-5">
                         <select id="pilih" class="form-select">
-                        <option selected>dr. Supriyadi</option>
-                        <option>dr. Shiva</option>
+                        <option selected>Pilih</option>
+                        @foreach ($data as $item)
+                        <option>dr. {{$item->nama}}</option>
+                        @endforeach
                         </select>
                     </div>
-                    <h4 class="mt-3">Total Pesanan =</h4>
-                    <a href="/" class="mt-3 me-3 btn btn-danger py-2 px-5 mb-5 rounded-pill">Back</a>
-                    <a href="payment/{id}" class="mt-3 btn btn-success ml-3 py-2 px-5 mb-5 rounded-pill">Buy</a>
+                    <a href="/" class="mt-5 me-3 btn btn-danger py-2 px-5 mb-5 rounded-pill">Back</a>
+                    <a href="payment/{id}" class="mt-5 btn btn-success ml-3 py-2 px-5 mb-5 rounded-pill">Buy</a>
                 </form>
             </div>
         </div>
