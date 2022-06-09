@@ -17,29 +17,31 @@
                 <img src="/gambar/bust-mask-5.svg" class="ml-5" height="700" width="500">
             </div>
             <div class="col-5">
-                <h1 style="font-weight: bold;">Pesan Layanan</h1>
-                <h5 class="mt-5">Pilih Package</h5>
-                <form action="/bayar" method="POST">
+                <h1 style="font-weight: bold;">Pembayaran</h1>
+                <h5 class="mt-5">Package yang dipilih</h5>
+                <form action="/upload/bukti/{{$pembelian->id}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="col-md-5">
-                        <select class="form-select" aria-label="Default select example" name="pilihan">
-                            <option>Pilih</option>
-                            @foreach ($layanan as $item)
-                            <option value="{{$item->paket}}">{{$item->paket}}</option>
-                            @endforeach
-                        </select>
+                        <h3>{{$pembelian->pilihan}}</h3>
                     </div>
-                    <h5 class="mt-4">Pilih Dokter</h5>
+                    <h5 class="mt-4">Dokter yang dipilih</h5>
                     <div class="col-md-5">
-                        <select id="pilih" name="dokter" class="form-select">
-                        <option selected>Pilih</option>
-                        @foreach ($user as $item)
-                        <option value="{{$item->id}}">dr. {{$item->nama}}</option>
-                        @endforeach
-                        </select>
+                        <h3>dr. {{$dokter->nama}}</h3>
+                    </div>
+                    <h5 class="mt-4">Deskripsi Paket</h5>
+                    <div class="col-md-5">
+                        <h3>{{$layanan->service}}</h3>
+                    </div>
+                    <h5 class="mt-4">Total Pembayaran</h5>
+                    <div class="col-md-5">
+                        <h3>Rp. {{$layanan->harga}}</h3>
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label for="formFile" class="form-label">Upload Bukti Pembayaran</label>
+                        <input class="form-control" type="file" id="formFile" name="transfer">
                     </div>
                     <a href="/" class="mt-5 me-3 btn btn-danger py-2 px-5 mb-5 rounded-pill">Back</a>
-                    <button type="submit" class="mt-5 btn btn-success ml-3 py-2 px-5 mb-5 rounded-pill">Buy</button>
+                    <button type="submit" class="mt-5 btn btn-success ml-3 py-2 px-5 mb-5 rounded-pill">Pay</button>
                 </form>
             </div>
         </div>

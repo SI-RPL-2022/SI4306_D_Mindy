@@ -15,9 +15,11 @@ class CreatePembeliansTable extends Migration
     {
         Schema::create('pembelians', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('id_user');
             $table->string('pilihan');
             $table->string('dokter');
-            $table->string('transfer');
+            $table->string('status')->default('Menunggu');
+            $table->string('transfer')->nullable();
             $table->timestamps();
         });
     }

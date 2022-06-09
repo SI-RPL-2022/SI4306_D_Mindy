@@ -14,16 +14,30 @@ class PembelianController extends Controller
         return view('user.chose', compact('data'));
     }
 
-    public function beli()
+    public function upload(Request $request, $id)
     {
-        return view("pilihLayanan");
+        if ($request->transfer) {
+            $imgName = time() . $request->transfer->getClientOriginalName();
+            $request->transfer->move(public_path('gambar'), $imgName);
+
+            Pembelian::find($id)->update([
+                'transfer' => $imgName
+            ]);
+        }
+        return redirect("payment/".auth()->user()->id);
     }
 
-    public function pilih()
+    public function bayar(Request $request)
     {
-        $layanan = Layanan::get();
-        $user = User::get();
-        $data = $layanan->concat($user);
-        return view('pilihLayanan', compact('data'));
+        $dokter = User::find($request->dokter);
+        $layanan = Layanan::where('paket', $request->pilihan)->first();
+        $pembelian = Pembelian::create([
+            'id_user' => auth()->user()->id,
+            'pilihan' => $request->pilihan,
+            'dokter' => $request->dokter
+        ]);
+
+        return view('bayar', compact('pembelian', 'dokter', 'layanan'));
     }
+        
 }

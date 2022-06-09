@@ -80,37 +80,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($pembelian as $item)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Issac Benedikus</td>
-                                <td>Package 1</td>
-                                <td>25.000</td>
-                                <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: #000000;">Lunas</a>
+                                <th scope="row">{{$loop->iteration}}</th>
+                                <td>{{$item->nama}}</td>
+                                <td>{{$item->paket}}</td>
+                                <td>{{$item->harga}}</td>
+                                <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: {{$item->status == 'Menunggu'?'grey':'black'}};">{{$item->status}}</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Valir Kagura</td>
-                                <td>Package 2</td>
-                                <td>50.000</td>
-                                <td><a href="#" class="btn btn-success px-4 btn-lg disabled" style="border-radius: 30px; font-size: 12px; background-color: #000000;" aria-disabled="true">Belum</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Vallene Putri</td>
-                                <td>Package 3</td>
-                                <td>100.000</td>
-                                <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: #000000;">Lunas</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Meidina Bagaskara</td>
-                                <td>Package 1</td>
-                                <td>25.000</td>
-                                <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: #000000;">Lunas
-                                </td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     <a href="/pilih" class="btn btn-success px-3 py-2 primary-btn mb-5" style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Buy Package</a>

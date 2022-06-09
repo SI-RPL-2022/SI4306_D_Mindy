@@ -68,5 +68,5 @@ Route::get('/profile', [PsikologController::class, 'profile']);
 Route::get('profil/{id}', [PsikologController::class, 'show']);
 
 
-Route::get('/pilih', [PembelianController::class, 'pilih']);
-Route::post('/beli', [PembelianController::class, 'beli']);
+Route::post('/upload/bukti/{id}', [PembelianController::class, 'upload']);
+Route::post('/bayar', [PembelianController::class, 'bayar']);
