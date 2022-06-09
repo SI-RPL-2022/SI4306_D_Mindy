@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pembelian;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -103,7 +104,8 @@ class ProfileController extends Controller
 
     public function payment()
     {
-        return view('user.paymentUser');
+        $pembelian = Pembelian::join('users', 'pembelians.dokter', '=', 'users.id')->join('products', 'pembelians.pilihan', '=', 'products.paket')->get(['pembelians.*', 'users.nama', 'products.paket', 'products.harga']);
+        return view('user.paymentUser', compact('pembelian'));
     }
 
     public function video()

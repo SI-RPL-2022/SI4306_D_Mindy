@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Layanan;
+use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,8 @@ class LayananController extends Controller
     return $next($request);
 }
     public function index(Request $request) {
-        $data = Layanan::get();
-        return view('pilihLayanan', compact('data'));
+        $layanan = Layanan::get();
+        $user = User::where('user','psikolog')->get();
+        return view('pilihLayanan', compact('layanan', 'user'));
     }
 }
