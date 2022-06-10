@@ -73,7 +73,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Nama</th>
+                                <th scope="col">Dokter</th>
                                 <th scope="col">Product</th>
                                 <th scope="col">Harga</th>
                                 <th scope="col" width="40px">Status</th>
@@ -83,12 +83,45 @@
                             @foreach ($pembelian as $item)
                             <tr>
                                 <th scope="row">{{$loop->iteration}}</th>
-                                <td>{{$item->nama}}</td>
+                                <td>dr. {{$item->nama}}</td>
                                 <td>{{$item->paket}}</td>
                                 <td>{{$item->harga}}</td>
-                                <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: {{$item->status == 'Menunggu'?'grey':'black'}};">{{$item->status}}</a>
+                                <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: {{$item->status == 'Menunggu'?'grey':'black'}};" data-bs-toggle="modal" data-bs-target="#modalDetail{{$item->id}}">{{$item->status}}</a>
                                 </td>
                             </tr>
+                            <!-- modal detail pesanan -->
+                            <div class="modal fade" id="modalDetail{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Detail Pembayaran</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        @csrf
+                                            <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Dokter</label>
+                                            <input type="text" class="form-control" id="recipient-name" name="nama" value="dr. {{$item->nama}}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Paket</label>
+                                            <input type="text" class="form-control" id="message-text" name="paket" value="{{$item->paket}}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Harga</label>
+                                                <input type="text" class="form-control" id="recipient-name" name="harga" value="{{$item->harga}}" readonly>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Harga</label>
+                                                <input type="text" class="form-control" id="recipient-name" name="status" value="{{$item->status}}" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             @endforeach
                         </tbody>
                     </table>
