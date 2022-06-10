@@ -50,6 +50,7 @@ Route::get('video', [ProfileController::class, 'video']);
 Route::get('/admin', [DashboardController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
 Route::get('/payment', [PaymentController::class, 'index']);
+Route::post('/payment/edit/{id}', [PaymentController::class, 'update']);
 Route::get('/product/AddProduct', function () { return view('/admin/AddProduct');});
 Route::post('/product/add', [ProductController::class, 'store']);
 Route::get('/product/edit/{id}', [ProductController::class, 'edit']);
@@ -62,7 +63,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/landing', [ProfileController::class, 'akun']);
 });
 
-Route::get('psikolog/{id}', [PsikologController::class, 'index']);
+Route::get('jadwal/{id}', [PsikologController::class, 'index']);
 Route::get('/chat', [PsikologController::class, 'chat']);
 Route::get('/profile', [PsikologController::class, 'profile']);
 Route::get('profil/{id}', [PsikologController::class, 'show']);

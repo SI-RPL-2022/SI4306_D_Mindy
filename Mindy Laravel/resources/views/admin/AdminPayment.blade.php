@@ -28,70 +28,72 @@
                     <td>{{$item->paket}}</td>
                     <td>{{$item->harga}}</td>
                     <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: {{$item->status == 'Menunggu'?'grey':'black'}};" data-bs-toggle="modal" data-bs-target="#ModalSeePayments">{{$item->status}}</a></td>
-                    <td><a class="btn btn-primary px-4 rounded-pill" style="border-radius: 30px; font-size: 12px;" data-bs-toggle="modal" data-bs-target="#modalEdit"> Update </a></td>
+                    <td><a class="btn btn-primary px-4 rounded-pill" style="border-radius: 30px; font-size: 12px;" data-bs-toggle="modal" data-bs-target="#modalEdit{{$item->id}}"> Update </a></td>
                     <td><a href="#" class="btn btn-danger px-4 rounded-pill" style="border-radius: 30px; font-size: 12px;" name=""> Delete </a></td>
                 </tr>
 
                 <!-- modal update -->
-                <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <form action="" method="POST" enctype="multipart/form-data">    
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel" >Sunting</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                <div class="modal fade" id="modalEdit{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form action="/payment/edit/{{$item->id}}" method="post">
+                        <div class="modal-body">
+                              @csrf
+                                <div class="mb-3">
+                                  <label for="recipient-name" class="col-form-label">Nama</label>
+                                  <input type="text" class="form-control" id="recipient-name" name="nama" value="{{$item->nama}}" readonly>
                                 </div>
-
-                                <div class="modal-body">
-                                    <input type="hidden" class="form-control" id="id" name="id" value="">
-                                    <div class="form-group">
-                                        <label for="nama"><b>Nama</b></label>
-                                        <input type="text" class="form-control" id="nama" name="nama" value="{{$item->nama}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="product"><b>Package</b></label>
-                                        <input type="text" class="form-control" id="product" name="paket" value="{{$item->paket}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="buy"><b>Harga</b></label>
-                                        <input type="text" class="form-control" id="buy" name="harga" value="{{$item->harga}}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="status"><b>Status</b></label>
-                                        <input type="text" class="form-control" id="status" name="status" value="{{$item->status}}">
-                                    </div>
+                                <div class="mb-3">
+                                  <label for="message-text" class="col-form-label">Paket</label>
+                                  <input type="text" class="form-control" id="message-text" name="paket" value="{{$item->paket}}" readonly>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button class="btn btn-primary" type="submit" name="update" id="update" >Save changes</button>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Harga</label>
+                                    <input type="text" class="form-control" id="recipient-name" name="harga" value="{{$item->harga}}" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Status</label>
+                                    <select class="form-select" aria-label="Default select example" name="status">
+                                        <option selected value="{{$item->status}}">{{$item->status}}</option>
+                                        <option value="Menunggu">Menunggu</option>
+                                        <option value="Lunas">Lunas</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            </div>
                         </form>
+                        </div>
                     </div>
                 </div>
 
                 <!-- MODAL LIHAT BUKTI -->
-                <div class="modal fade" id="ModalSeePayments">
-                    <div class="modal-dialog modal-dialog-centered modal-ls">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">Bukti Pembayaran</h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <div class="custom-file" style="width: 200px; height: 300px; overflow: hidden; display: block; margin-left:auto;margin-right:auto;">
-                                        <img src="gambar/{{$item->transfer}}"  style="width: 100%; object-fit: cover;" >                              
-                                    </div>                
-                                </div>
+                <div class="modal fade" id="ModalSeePayments" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Bukti Pembayaran</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <div class="custom-file" style="width: 200px; height: 300px; overflow: hidden; display: block; margin-left:auto;margin-right:auto;">
+                                    <img src="gambar/{{$item->transfer}}"  style="width: 100%; object-fit: cover;" >                              
+                                </div>                
                             </div>
                         </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                 @endforeach
             </tbody>
         </table>

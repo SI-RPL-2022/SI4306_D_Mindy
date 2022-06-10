@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PsikologController extends Controller
 {
-    public function index()
+    public function index(Request $request, $id)
     {
         return view('psikolog.jadwal');
     }
