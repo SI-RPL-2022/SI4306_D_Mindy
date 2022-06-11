@@ -125,7 +125,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <a href="/pilih" class="btn btn-success px-3 py-2 primary-btn mb-5" style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Buy Package</a>
+                    <a href="/layanan" class="btn btn-success px-3 py-2 primary-btn mb-5" style="border-radius: 30px; font-size: 20px; background-color: #079911;margin-right: 40px;">Buy Package</a>
                 </div>
             </main>
         </div>
