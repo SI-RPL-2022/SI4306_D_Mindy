@@ -20,6 +20,8 @@ class CreatePembeliansTable extends Migration
             $table->string('dokter');
             $table->string('status')->default('Menunggu');
             $table->string('transfer')->nullable();
+            $table->string('jadwal')->nullable();
+            $table->string('link')->nullable();
             $table->timestamps();
         });
     }

@@ -2,22 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pembelian;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class PsikologController extends Controller
 {
-    public function index(Request $request, $id)
+    public function index()
     {
-        return view('psikolog.jadwal');
+        $jadwal = Pembelian::join('users', 'pembelians.id_user', '=', 'users.id')->join('products', 'pembelians.pilihan', '=', 'products.paket')->get(['pembelians.*', 'users.nama', 'products.paket', 'products.service']);
+        return view('psikolog.jadwal', compact('jadwal'));
+    }
+
+    public function input(Request $request, $id){
+        Pembelian::find($request->id)->update([
+            'jadwal' => $request->jadwal,
+            'link' =>$request->link
+        ]);
+        return redirect('jadwal/' . $request->id);
     }
 
     public function chat()
     {
-        return view('psikolog.chat');
+        $contact = Pembelian::join('users', 'pembelians.id_user', '=', 'users.id')->get(['pembelians.*', 'users.nama', 'users.nomor']);
+        return view('psikolog.chat', compact('contact'));
     }
 
-    public function profile()
+    public function profil()
     {
         return view('psikolog.profile');
     }

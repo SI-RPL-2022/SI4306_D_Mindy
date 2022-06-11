@@ -23,7 +23,7 @@ class LoginController extends Controller{
                 return redirect()->intended('profile/'. $data->id);
             }
             if ($data->user == 'psikolog'){
-                return redirect()->intended('psikolog/'. $data->id);
+                return redirect()->intended('jadwal/'. $data->id);
             }
             if ($data->user == 'admin'){
                 return redirect()->intended('/admin');
