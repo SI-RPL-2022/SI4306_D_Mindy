@@ -50,7 +50,7 @@
                 <div class="mb-2">
                     <label for="formGroupExampleInput" class="form-label">Nomor HP</label>
                     <input type="number" class="form-control border border-4 border border-dark"
-                        id="formGroupExampleInput" placeholder="Nomor HP" name="nomor" required style="height: 60px; border-radius: 40px;">
+                        id="formGroupExampleInput" placeholder="Nomor HP" name="nomor" required style="height: 60px; border-radius: 40px;" value="62">
                 </div>
                 <div class="mb-2">
                     <label for="formGroupExampleInput" class="form-label">Tanggal Lahir</label>

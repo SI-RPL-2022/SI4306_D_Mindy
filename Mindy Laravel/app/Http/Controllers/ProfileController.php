@@ -99,7 +99,8 @@ class ProfileController extends Controller
      */
     public function schedule()
     {
-        return view('user.scheduleUser');
+        $schedule = Pembelian::join('users', 'pembelians.dokter', '=', 'users.id')->get(['pembelians.*', 'users.nama', 'users.nomor']);
+        return view('user.scheduleUser', compact('schedule'));
     }
 
     public function payment()

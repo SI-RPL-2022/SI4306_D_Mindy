@@ -79,31 +79,18 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Tanggal</th>
+                                <th scope="col">Jadwal</th>
                                 <th scope="col">Link</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($schedule as $item)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>15-04-2022</td>
-                                <td>meet.balalala</td>
+                                <th scope="row">{{$loop->iteration}}</th>
+                                <td>{{$item->jadwal}}</td>
+                                <td><a href="https://{{$item->link}}" style="text-decoration: none; color: black">{{$item->link}}</td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>16-04-2022</td>
-                                <td>meet.balalala</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>17-04-2022</td>
-                                <td>meet.balalala</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>18-04-2022</td>
-                                <td>meet.balalala</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
 
@@ -118,11 +105,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($schedule as $item)
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>dr. Sitorus Sidragon</td>
-                                    <td>wa.08987654321</td>
+                                    <th scope="row">{{$loop->iteration}}</th>
+                                    <td>dr. {{$item->nama}}</td>
+                                    <td><a href="https://wa.me/{{$item->nomor}}" style="text-decoration: none; color: black;">{{$item->nomor}}</td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
