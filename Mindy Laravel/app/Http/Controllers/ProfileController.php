@@ -99,13 +99,13 @@ class ProfileController extends Controller
      */
     public function schedule()
     {
-        $schedule = Pembelian::join('users', 'pembelians.dokter', '=', 'users.id')->get(['pembelians.*', 'users.nama', 'users.nomor']);
+        $schedule = Pembelian::where('id_user', Auth::user()->id)->join('users', 'pembelians.dokter', '=', 'users.id')->get(['pembelians.*', 'users.nama', 'users.nomor']);
         return view('user.scheduleUser', compact('schedule'));
     }
 
     public function payment()
     {
-        $pembelian = Pembelian::join('users', 'pembelians.dokter', '=', 'users.id')->join('products', 'pembelians.pilihan', '=', 'products.paket')->get(['pembelians.*', 'users.nama', 'products.paket', 'products.harga']);
+        $pembelian = Pembelian::where('id_user', Auth::user()->id)->join('users', 'pembelians.dokter', '=', 'users.id')->join('products', 'pembelians.pilihan', '=', 'products.paket')->get(['pembelians.*', 'users.nama', 'products.paket', 'products.harga']);
         return view('user.paymentUser', compact('pembelian'));
     }
 
