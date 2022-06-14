@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Pembelian;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PsikologController extends Controller
 {
     public function index()
     {
-        $jadwal = Pembelian::join('users', 'pembelians.id_user', '=', 'users.id')->join('products', 'pembelians.pilihan', '=', 'products.paket')->get(['pembelians.*', 'users.nama', 'products.paket', 'products.service']);
+        $jadwal = Pembelian::where('dokter', Auth::user()->id)->join('users', 'pembelians.id_user', '=', 'users.id')->join('products', 'pembelians.pilihan', '=', 'products.paket')->get(['pembelians.*', 'users.nama', 'products.paket', 'products.service']);
         return view('psikolog.jadwal', compact('jadwal'));
     }
 
@@ -24,7 +25,7 @@ class PsikologController extends Controller
 
     public function chat()
     {
-        $contact = Pembelian::join('users', 'pembelians.id_user', '=', 'users.id')->get(['pembelians.*', 'users.nama', 'users.nomor']);
+        $contact = Pembelian::where('dokter', Auth::user()->id)->join('users', 'pembelians.id_user', '=', 'users.id')->get(['pembelians.*', 'users.nama', 'users.nomor']);
         return view('psikolog.chat', compact('contact'));
     }
 
