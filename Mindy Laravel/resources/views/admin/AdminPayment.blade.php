@@ -27,7 +27,7 @@
                     <td>{{$item->nama}}</td>
                     <td>{{$item->paket}}</td>
                     <td>{{$item->harga}}</td>
-                    <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: {{$item->status == 'Menunggu'?'grey':'black'}};" data-bs-toggle="modal" data-bs-target="#ModalSeePayments">{{$item->status}}</a></td>
+                    <td><a href="#" class="btn btn-success px-4" style="border-radius: 30px; font-size: 12px; background-color: {{$item->status == 'Menunggu'?'grey':'black'}};" data-bs-toggle="modal" data-bs-target="#ModalSeePayments{{$item->id}}">{{$item->status}}</a></td>
                     <td><a class="btn btn-primary px-4 rounded-pill" style="border-radius: 30px; font-size: 12px;" data-bs-toggle="modal" data-bs-target="#modalEdit{{$item->id}}"> Update </a></td>
                     <td><a href="#" class="btn btn-danger px-4 rounded-pill" style="border-radius: 30px; font-size: 12px;" name=""> Delete </a></td>
                 </tr>
@@ -74,7 +74,7 @@
                 </div>
 
                 <!-- MODAL LIHAT BUKTI -->
-                <div class="modal fade" id="ModalSeePayments" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="ModalSeePayments{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
