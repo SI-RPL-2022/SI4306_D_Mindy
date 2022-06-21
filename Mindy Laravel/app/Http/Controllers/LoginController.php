@@ -20,16 +20,16 @@ class LoginController extends Controller{
             $data = User::where('email', $request -> email)->first();
             Session::put('user', $data);
             if ($data->user == 'user'){
-                return redirect()->intended('profile/'. $data->id);
+                return redirect()->intended('profile/'. $data->id)->with('success', 'Selamat Datang '. Auth()->user()->nama);
             }
             if ($data->user == 'psikolog'){
-                return redirect()->intended('jadwal/'. $data->id);
+                return redirect()->intended('jadwal/'. $data->id)->with('success', 'Selamat Datang '. Auth()->user()->nama);
             }
             if ($data->user == 'admin'){
-                return redirect()->intended('/admin');
+                return redirect()->intended('/admin')->with('success', 'Selamat Datang '. Auth()->user()->nama);
             }
         }
 
-        return back()->with('loginError', 'Login Failed!');
+        return back()->with('error', 'Email atau Password Kamu Salah!');
     }
 }

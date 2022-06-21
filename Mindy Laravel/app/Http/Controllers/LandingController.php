@@ -10,8 +10,6 @@ class LandingController extends Controller
     public function index()
     {
         $items = product::all();
-        return view('landing', [
-            'items'=>$items
-        ]);
+        return view('landing', compact('items'));
     }
 }

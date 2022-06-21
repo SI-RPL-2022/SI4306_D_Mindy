@@ -11,9 +11,7 @@ class ProductController extends Controller
     public function index()
     {
         $items = product::all();
-        return view('admin.AdminProduct', [
-            'items'=>$items
-        ]);
+        return view('admin.AdminProduct', compact('items'));
     }
 
     public function create()
@@ -31,32 +29,31 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->all();
-
-        Product::create($data);
-
-        $items = product::all();
-        return view('admin.AdminProduct', [
-            'items'=>$items
+        Product::create([
+            'paket' => $request->paket,
+            'harga' => $request->harga,
+            'service' => $request->service
         ]);
+
+        return redirect('/product')->with('success','Produk Berhasil di Tambahkan!');
     }
     public function update(Request $request,int $id)
     {
 
         $item = product::find($id);
 
-        $item->nama = $request['paket'];
+        $item->paket = $request['paket'];
         $item->harga = $request['harga'];
         $item->service = $request['service'];
         $item->save();
 
-        return redirect('/product');
+        return redirect('/product')->with('success','Produk Berhasil di Update!');
     }
     public function destroy(Request $request,int $id)
     {
         $item = product::findOrFail($id);
         $item->delete();
 
-        return redirect('/product');
+        return redirect('/product')->with('success','Produk Berhasil di Delete!');
     }
 }

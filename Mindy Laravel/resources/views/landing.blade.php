@@ -84,16 +84,18 @@
                 <p class="mb-5">Menawarkan harga yang menarik</p>
                 <div class="row d-flex mt-5">
                     @foreach($items as $item)
-                    <div class="col border text-left p-4 rounded-lg m-2">
-                        <h5>{{ $item->paket }}</h5>
-                        <h2 class="mb-4">{{ $item->harga}}</h2>
-                        <div class="row d-flex px-3 mb-5">
-                            <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
-                            <p>{{ $item->service }}</p>
+                        <div class="card col border text-left p-4 rounded-lg m-2">
+                            <div class="card-body">
+                                <h5>{{ $item->paket }}</h5>
+                                <h2 class="mb-4">Rp. {{ $item->harga}}</h2>
+                                <div class="row d-flex px-3 mb-5">
+                                    <img src="/Landing Page/v.svg" alt="" class="mr-2" style="height: 20px;">
+                                    <p>{{ $item->service }}</p>
+                                </div>
+                            </div>
+                            <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod1">Details</a>
+                            <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
                         </div>
-                        <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod1">Details</a>
-                        <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
-                    </div>
                     @endforeach
                 </div>
             </div>
@@ -240,7 +242,7 @@
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
-    s1.src='https://embed.tawk.to/626ab7b7b0d10b6f3e6fd046/1g1odr9g7';
+    s1.src='https://embed.tawk.to/62b16facb0d10b6f3e78660c/1g62hof2n';
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);

@@ -88,7 +88,7 @@ class ProfileController extends Controller
             'kelamin' => $request->kelamin,
             'gambar' => $imgName,
         ]);
-        return redirect('profile/' . $request->id);
+        return redirect('profile/' . $request->id)->with('success','Data Kamu Berhasil di Update!');
     }
 
     /**
@@ -133,6 +133,6 @@ class ProfileController extends Controller
 
         Auth::logout();
 
-        return redirect('/masuk');
+        return redirect('/masuk')->with('success', 'Kamu Berhasil Logout!');
     }
 }

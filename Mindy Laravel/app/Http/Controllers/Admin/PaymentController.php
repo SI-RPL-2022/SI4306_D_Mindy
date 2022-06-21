@@ -19,6 +19,6 @@ class PaymentController extends Controller
         Pembelian::find($id)->update([
             'status' => $request->status
         ]);
-        return redirect("/payment");
+        return redirect("/payment")->with('success','Berhasil Update Status!');
     }
 }

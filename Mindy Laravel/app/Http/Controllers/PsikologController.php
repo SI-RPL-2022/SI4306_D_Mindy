@@ -20,7 +20,7 @@ class PsikologController extends Controller
             'jadwal' => $request->jadwal,
             'link' =>$request->link
         ]);
-        return redirect('jadwal/' . $request->id);
+        return redirect('jadwal/' . $request->id)->with('success','Jadwal dan Link Berhasil di Input!');
     }
 
     public function chat()
@@ -43,7 +43,7 @@ class PsikologController extends Controller
     public function edit($id)
     {
         $data = User::find($id);
-        return view('user.editUser', compact('data'));
+        return view('psikolog.editProfile', compact('data'));
     }
 
     public function update(Request $request, $id)
@@ -62,6 +62,6 @@ class PsikologController extends Controller
             'kelamin' => $request->kelamin,
             'gambar' => $imgName,
         ]);
-        return redirect('psikolog/' . $request->id);
+        return redirect('profil/' . $request->id)->with('success','Data Kamu Berhasil di Update!');
     }
 }

@@ -14,7 +14,7 @@
 
     <div class="container">
         <h1 class="mt-4 mb-4">Edit Profile</h1>
-        <form class="row g-3" action="/edit/{id}" method="post" enctype="multipart/form-data">
+        <form class="row g-3" action="/update/psikolog/{id}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="col-12">
                 <input type="hidden" class="form-control" id="inputEmail4" name="id" value="{{$data->id}}">
@@ -48,7 +48,7 @@
                 <input class="form-control" type="file" id="formFile" name="gambar">
             </div>
             <div class="col-12">
-                <a href="/profile/{{ Session::get('user')->id }}" type="button" class="btn btn-secondary">Back</a>
+                <a href="/profil/{{ Session::get('user')->id }}" type="button" class="btn btn-secondary">Back</a>
                 <button type="submit" class="btn btn-primary">Save</button>
             </div>
         </form>

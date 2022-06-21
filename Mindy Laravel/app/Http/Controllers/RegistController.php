@@ -49,7 +49,7 @@ class RegistController extends Controller
             'password' => Hash::make($request -> password)
         ]);
 
-        return redirect('/masuk');
+        return redirect('/masuk')->with('success', 'Akun Berhasil Dibuat!');;
     }
 
     /**

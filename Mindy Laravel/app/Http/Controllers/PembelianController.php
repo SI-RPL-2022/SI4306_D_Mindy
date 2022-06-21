@@ -24,7 +24,7 @@ class PembelianController extends Controller
                 'transfer' => $imgName
             ]);
         }
-        return redirect("payment/".auth()->user()->id);
+        return redirect("payment/".auth()->user()->id)->with('success', 'Pesanan Kamu Telah Berhasil!');
     }
 
     public function bayar(Request $request)

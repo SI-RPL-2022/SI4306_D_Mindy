@@ -25,6 +25,8 @@
 <main class="col-md-5 ms-sm-auto col-lg-10 px-md-6">
     @include('psikolog.include.bar')
     @yield('content')
+    @include('sweetalert::alert')
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </main>
 
 </html>

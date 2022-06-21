@@ -22,20 +22,6 @@
 </head>
 
 <body>
-
-    @if(session()->has('success'))
-        <div class="alert alert-success alert-dismissible fade show">
-            {{ session('success') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
-
-    @if(session()->has('loginError'))
-        <div class="alert alert-danger alert-dismissible fade show">
-            {{ session('loginError') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    @endif
         
         <div class="d-flex flex-wrap flex-md-nowrap align-items-center">
             <div class="row" style="background-color: rgba(221, 255, 223, 1); height: 120vh;">
@@ -75,7 +61,9 @@
                 </form>
             </div>
         </div>
+        @include('sweetalert::alert')
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
