@@ -49,7 +49,7 @@
             </div>
             <div class="col-12">
                 <a href="/profile/{{ Session::get('user')->id }}" type="button" class="btn btn-secondary">Back</a>
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-success">Save</button>
             </div>
         </form>
     </div>

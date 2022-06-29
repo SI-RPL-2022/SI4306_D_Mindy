@@ -120,7 +120,7 @@ class ProfileController extends Controller
             return redirect()->intended('profile/' . auth::id());
         }
         if (auth::user()->user == 'psikolog') {
-            return redirect()->intended('psikolog/' . auth::id());
+            return redirect()->intended('/jadwal' . auth::id());
         }
         if (auth::user()->user == 'admin') {
             return redirect()->intended('/admin');

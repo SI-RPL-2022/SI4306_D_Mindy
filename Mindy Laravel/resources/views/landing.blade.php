@@ -93,8 +93,30 @@
                                     <p>{{ $item->service }}</p>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod1">Details</a>
+                            <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod{{$item->id}}">Details</a>
+                            @if (auth()->user()->user == 'user')
                             <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
+                            @else
+                            <a href="#" class="btn btn-success w-100 mt-3">Start</a>
+                            @endif
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="prod{{$item->id}}" tabindex="-1" aria-labelledby="prod" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Detail {{$item->paket}}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Sesi temu konseling dengan Psikolog yang bersertifikasi dan berpengalaman dengan layanan {{$item->service}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -175,7 +197,11 @@
                 <h2>Tenangkan Dirimu dan Berlatih Untuk Menerima Diri</h2>
                 <p class="mt-3">Menjaga kesehatan mental anda merupakan hal yang harus menjadi sebuah
                     prioritas bagi diri anda.</p>
-                <a href="" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                @if (auth()->user()->user == 'user')
+                <a href="/layanan" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                @else
+                <a href="#" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                @endif
             </div>
         </div>
     </div>
@@ -193,7 +219,11 @@
                 </p>
             </div>
             <div class="col-2">
-                <a href="" class="mt-2 btn btn-light py-2 px-5 rounded-pill">Start</a>
+                @if (auth()->user()->user == 'user')
+                <a href="/layanan" class="mt-2 btn btn-light py-2 px-5 rounded-pill">Start</a>
+                @else
+                <a href="#" class="mt-2 btn btn-light py-2 px-5 rounded-pill">Start</a>
+                @endif
             </div>
         </div>
     </div>

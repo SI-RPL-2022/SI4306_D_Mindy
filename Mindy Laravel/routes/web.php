@@ -65,7 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/landing', [ProfileController::class, 'akun']);
 });
 
-Route::get('jadwal/{id}', [PsikologController::class, 'index']);
+Route::get('/jadwal/{id}', [PsikologController::class, 'index']);
 Route::get('/chat', [PsikologController::class, 'chat']);
 Route::get('/profil', [PsikologController::class, 'profil']);
 Route::get('/profil/{id}', [PsikologController::class, 'show']);
