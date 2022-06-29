@@ -43,17 +43,10 @@
                         id="formGroupExampleInput2" placeholder="Password" name="password" required style="height: 92px; border-radius: 40px;">
                 </div>
                 <div class="d-flex">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" style="width: 20px; height: 20px;">
-                        <label class="form-check-label" for="defaultCheck1" style="font-family: 'Nunito', sans-serif;
-                        font-weight: 400; font-size: 18px;">
-                            Remember me
-                        </label>
-                    </div>
                     <input class="btn btn-primary" type="submit" value="Login"
-                        style="height: 50px; width: 150px; margin-left: 300px; background-color: rgba(7, 153, 17, 1); border-radius: 30px;">
+                        style="height: 50px; width: 150px; background-color: rgba(7, 153, 17, 1); border-radius: 30px;">
                 </div>
-                <p class="mt-6">Don't have account?<a href="/daftar"> Register</a></p>
+                <p class="mt-3">Don't have account?<a href="/daftar"> Register</a></p>
                 <div class="d-flex align-items-center">
                     <a href="/"><img src="/register/back.svg" width="40" height="40" style="margin-left: 250px;"></a>
                     <a href="/"><p style="margin-top: 17px; font-size: 30px; margin-left: 10px; color: black">Back</p></a>

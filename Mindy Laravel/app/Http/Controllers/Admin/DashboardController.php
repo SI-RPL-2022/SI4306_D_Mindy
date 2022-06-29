@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\performance;
 use App\Models\Pembelian;
 use Redirect,Response;
-Use DB;
+Use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 class DashboardController extends Controller
@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function index()
     {
 
-        $record = Pembelian::select('pilihan as List', \DB::raw("COUNT(pilihan) as count"), 'pilihan')
+        $record = Pembelian::select('pilihan as List', DB::raw("COUNT(pilihan) as count"), 'pilihan')
         ->groupBy('pilihan')
         ->get();
     
