@@ -93,12 +93,16 @@
                                     <p>{{ $item->service }}</p>
                                 </div>
                             </div>
-                            <a href="" class="btn btn-outline-success w-100 mt-5" data-bs-toggle="modal" data-bs-target="#prod{{$item->id}}">Details</a>
-                            @if (auth()->user()->user == 'user')
+                            @if (Auth::check() and Auth::user()->user == 'user')
                             <a href="/layanan" class="btn btn-success w-100 mt-3">Start</a>
+                            @elseif (Auth::check() and Auth::user()->user == 'admin')
+
+                            @elseif (Auth::check() and Auth::user()->user == 'psikolog')
+
                             @else
-                            <a href="#" class="btn btn-success w-100 mt-3">Start</a>
+                            <a href="/masuk" class="btn btn-success w-100 mt-3">Start</a>
                             @endif
+                            <a href="" class="btn btn-outline-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#prod{{$item->id}}">Details</a>
                         </div>
 
                         <!-- Modal -->
@@ -197,11 +201,15 @@
                 <h2>Tenangkan Dirimu dan Berlatih Untuk Menerima Diri</h2>
                 <p class="mt-3">Menjaga kesehatan mental anda merupakan hal yang harus menjadi sebuah
                     prioritas bagi diri anda.</p>
-                @if (auth()->user()->user == 'user')
-                <a href="/layanan" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
-                @else
-                <a href="#" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
-                @endif
+                    @if (Auth::check() and Auth::user()->user == 'user')
+                    <a href="/layanan" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                    @elseif (Auth::check() and Auth::user()->user == 'admin')
+
+                    @elseif (Auth::check() and Auth::user()->user == 'psikolog')
+
+                    @else
+                    <a href="/masuk" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                    @endif
             </div>
         </div>
     </div>
@@ -219,11 +227,15 @@
                 </p>
             </div>
             <div class="col-2">
-                @if (auth()->user()->user == 'user')
-                <a href="/layanan" class="mt-2 btn btn-light py-2 px-5 rounded-pill">Start</a>
-                @else
-                <a href="#" class="mt-2 btn btn-light py-2 px-5 rounded-pill">Start</a>
-                @endif
+                @if (Auth::check() and Auth::user()->user == 'user')
+                    <a href="/layanan" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                    @elseif (Auth::check() and Auth::user()->user == 'admin')
+
+                    @elseif (Auth::check() and Auth::user()->user == 'psikolog')
+
+                    @else
+                    <a href="/masuk" class="mt-2 btn btn-success py-2 px-5 rounded-pill">Start</a>
+                    @endif
             </div>
         </div>
     </div>

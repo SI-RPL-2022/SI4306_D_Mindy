@@ -20,7 +20,7 @@ class PsikologController extends Controller
             'jadwal' => $request->jadwal,
             'link' =>$request->link
         ]);
-        return redirect('/jadwal' . $request->id)->with('success','Jadwal dan Link Berhasil di Input!');
+        return redirect('/jadwal'.$request->id)->with('success','Jadwal dan Link Berhasil di Input!');
     }
 
     public function chat()
